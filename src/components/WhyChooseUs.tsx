@@ -8,8 +8,8 @@ const STATS = [
     label: "YEARS OF EXPERIENCE",
     icon: (
       <svg
-        width="30"
-        height="30"
+        width="46"
+        height="46"
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -58,8 +58,8 @@ const STATS = [
     label: "TOP 100 US FINANCIAL ADVICE FIRMS",
     icon: (
       <svg
-        width="30"
-        height="30"
+        width="46"
+        height="46"
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -125,8 +125,8 @@ const STATS = [
     label: "RATED 4.8* BY OUR CUSTOMERS",
     icon: (
       <svg
-        width="28"
-        height="28"
+        width="46"
+        height="46"
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +148,7 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-choose-us"
-      className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-white py-18"
     >
       {/* Dotted World Map Background (map2.svg already carries built-in 0.08 opacity) */}
       <div
@@ -167,7 +167,7 @@ export default function WhyChooseUs() {
       </div>
 
       {/* Section Content */}
-      <div className="relative z-10 mx-auto max-w-[1320px] px-6 sm:px-10 lg:px-14">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-14">
         {/* Top Two-Column Intro */}
         <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-6">
           {/* Left Eyebrow */}
@@ -189,9 +189,9 @@ export default function WhyChooseUs() {
               Make the difference.
             </h2>
 
-            <p className="mt-5 max-w-[575px] text-[14px] font-normal leading-[1.68] text-[#222222] sm:text-[14.5px]">
-              We make the difference by combining deep skills and experience,
-              advanced technologies, and integrated approaches to help you drive
+            <p className="mt-5 max-w-[675px] text-[14px] font-normal leading-[1.68] text-[#222222] sm:text-[14.5px]">
+              We make the difference by combining deep skills and experience,  advanced technologies, and integrated approaches to help you drive
+             
               success and realize a future filled with profound potential. The
               core of our business is built on integrity, teamwork and providing
               exceptional service.

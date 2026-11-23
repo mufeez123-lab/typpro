@@ -50,9 +50,9 @@ export default function BusinessSetup() {
   return (
     <section
       id="business-setup"
-      className="relative bg-[#faf6f6] py-20 sm:py-24 lg:py-[112px]"
+      className="relative bg-[#faf6f6] py-18"
     >
-      <div className="mx-auto max-w-[1320px] px-6 sm:px-10 lg:px-14">
+      <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-14">
         {/* Top Header Row: Heading Left + CTA Right */}
         <div className="mb-12 flex flex-col gap-6 md:mb-14 md:flex-row md:items-end md:justify-between">
           <div>
@@ -106,7 +106,7 @@ export default function BusinessSetup() {
               {/* Hover-from-bottom deep crimson gradient layer */}
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 translate-y-full bg-gradient-to-t from-[#7d0d18]/95 via-[#4b080f]/75 to-transparent transition-transform duration-500 ease-out group-hover:translate-y-0"
+                className="pointer-events-none absolute inset-0 translate-y-full bg-gradient-to-t from-[#7d0d18]/90 via-[#4b080f]/15 to-transparent transition-transform duration-500 ease-out group-hover:translate-y-0"
               />
 
               {/* Bottom-aligned card content with smooth upward lift on hover */}

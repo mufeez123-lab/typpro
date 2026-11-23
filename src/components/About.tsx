@@ -7,8 +7,8 @@ const ABOUT_PILLARS = [
     line2: "Service",
     icon: (
       <svg
-        width="38"
-        height="38"
+        width="48"
+        height="48"
         viewBox="0 0 40 40"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -52,8 +52,8 @@ const ABOUT_PILLARS = [
     line2: "Excellence",
     icon: (
       <svg
-        width="38"
-        height="38"
+        width="48"
+        height="48"
         viewBox="0 0 40 40"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -82,8 +82,8 @@ const ABOUT_PILLARS = [
     line2: "Security",
     icon: (
       <svg
-        width="38"
-        height="38"
+        width="48"
+        height="48"
         viewBox="0 0 40 40"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +139,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-[#0a0a0a] py-20 text-white sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-[#0a0a0a] py-18 text-white "
     >
       <div className="mx-auto max-w-[1320px] px-6 sm:px-10 lg:px-14">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">

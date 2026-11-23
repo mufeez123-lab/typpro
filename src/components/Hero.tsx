@@ -45,7 +45,7 @@ export default function Hero() {
             {/* Primary Solid White CTA */}
             <Link
               href="#services"
-              className="group inline-flex h-[42px] w-full items-center justify-between bg-white px-3 text-[14px] font-light text-[#2c191b] shadow-[0_6px_20px_rgba(90,8,15,0.2)] transition-all duration-200 hover:bg-white/95 hover:shadow-[0_10px_28px_rgba(90,8,15,0.28)] sm:w-[250px]"
+              className="group inline-flex h-[42px] w-full items-center justify-between bg-white px-3 text-[14px] font-medium text-[#b5121d] shadow-[0_6px_20px_rgba(90,8,15,0.2)] transition-all duration-200 hover:bg-white/95 hover:shadow-[0_10px_28px_rgba(90,8,15,0.28)] sm:w-[250px]"
             >
               <span>How we can help</span>
               <svg
@@ -68,7 +68,7 @@ export default function Hero() {
             {/* Secondary Transparent Bordered CTA */}
             <Link
               href="#contact"
-              className="group inline-flex h-[42px] w-full items-center justify-between  border border-white/75 bg-white/[0.04] px-5 text-[13px] font-light text-white backdrop-blur-[2px] transition-all duration-200 hover:border-white hover:bg-white/15 sm:w-[262px]"
+              className="group inline-flex h-[42px] w-full items-center justify-between  border border-white/75 bg-white/[0.04] px-5 text-[13px] font-medium text-white backdrop-blur-[2px] transition-all duration-200 hover:border-white hover:bg-white/15 sm:w-[262px]"
             >
               <span>Talk to our experts?</span>
               <svg
