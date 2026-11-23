@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import BlogNews from "@/components/BlogNews";
 import BusinessSetup from "@/components/BusinessSetup";
 import ChartersBenefits from "@/components/ChartersBenefits";
 import CompanySetupProcess from "@/components/CompanySetupProcess";
@@ -25,6 +26,7 @@ export default function Home() {
       <CompanySetupProcess />
       <ChartersBenefits />
       <SuccessStories />
+      <BlogNews />
       {/* <Contact /> */}
     </main>
   );
