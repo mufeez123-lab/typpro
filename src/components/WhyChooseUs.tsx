@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Counter from "./Counter";
 
 const STATS = [
   {
-    value: "14+",
-    label: "YEARS OF EXPERIENCE",
+    value: "50+",
+    label: "YEARS OF EXPERIENCE. YEARS OF EXPERIENCE YEARS OF EXPERIENCE",
     icon: (
       <svg
         width="46"
@@ -54,8 +55,8 @@ const STATS = [
     ),
   },
   {
-    value: "3th",
-    label: "TOP 100 US FINANCIAL ADVICE FIRMS",
+    value: "3rd",
+    label: "TOP 100 US FINANCIAL ADVICE FIRMS.TOP 100 US FINANCIAL ADVICE FIRMS. ",
     icon: (
       <svg
         width="46"
@@ -122,7 +123,7 @@ const STATS = [
   },
   {
     value: "4/5",
-    label: "RATED 4.8* BY OUR CUSTOMERS",
+    label: "RATED 4.8* BY OUR CUSTOMERS. RATED 4.8* BY OUR CUSTOMERS",
     icon: (
       <svg
         width="46"
@@ -206,14 +207,14 @@ export default function WhyChooseUs() {
               key={stat.label}
               className="group flex flex-col items-center"
             >
-              {/* Floating White Circular Icon Badge */}
+              {/* Floating White Circular Icon Badge
               <div className="flex h-[74px] w-[74px] items-center justify-center rounded-full bg-white shadow-[0_12px_36px_rgba(15,23,42,0.08)] transition-transform duration-300 group-hover:-translate-y-1">
                 {stat.icon}
-              </div>
+              </div> */}
 
               {/* Large Crimson Stat Figure */}
               <p className="mt-7 text-[44px] font-medium leading-none tracking-[-0.02em] text-[#9e1422] sm:text-[48px] lg:text-[52px]">
-                {stat.value}
+                <Counter value={stat.value} />
               </p>
 
               {/* Uppercase Crimson Caption */}

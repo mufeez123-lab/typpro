@@ -28,7 +28,7 @@ export default function Hero() {
       {/* Main Hero Content */}
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-16 pt-28 sm:px-10 md:pb-20 md:pt-32 lg:px-14">
         <div className="max-w-[780px]">
-          <h1 className="text-[40px] font-medium leading-[1.08] tracking-[-0.028em] text-white sm:text-[54px] md:text-[62px] lg:text-[82px] xl:text-[76px]">
+          <h1 className="text-[40px] font-medium leading-[1.08] tracking-[-0.028em] text-white sm:text-[54px] md:text-[62px] lg:text-[72px] ">
             Helping you build and
             <br />
             protect your wealth
