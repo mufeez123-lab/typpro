@@ -8,6 +8,7 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Quality from "@/components/Quality";
 import Services from "@/components/Services";
+import SuccessStories from "@/components/SuccessStories";
 import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <EmptyLegs />
       <CompanySetupProcess />
       <ChartersBenefits />
+      <SuccessStories />
       {/* <Contact /> */}
     </main>
   );

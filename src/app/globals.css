@@ -45,7 +45,16 @@ body {
 }
 
 .animate-marquee-left:hover,
-.animate-marquee-right:hover {
+.animate-marquee-right:hover,
+.animate-marquee-reviews:hover {
   animation-play-state: paused;
 }
+
+.animate-marquee-reviews {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 36s linear infinite;
+  will-change: transform;
+}
+
 

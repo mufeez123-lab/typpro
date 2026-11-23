@@ -10,7 +10,7 @@ interface CountryItem {
 
 // Crisp, lightweight circular SVG flags
 const AfghanistanFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect x="0" y="0" width="10.67" height="32" fill="#000000" />
     <rect x="10.67" y="0" width="10.66" height="32" fill="#d3202a" />
     <rect x="21.33" y="0" width="10.67" height="32" fill="#007a36" />
@@ -20,7 +20,7 @@ const AfghanistanFlag = () => (
 );
 
 const BrazilFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect width="32" height="32" fill="#009c3b" />
     <polygon points="16,4.5 28,16 16,27.5 4,16" fill="#ffdf00" />
     <circle cx="16" cy="16" r="6.5" fill="#002776" />
@@ -29,7 +29,7 @@ const BrazilFlag = () => (
 );
 
 const AustraliaFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect width="32" height="32" fill="#00008b" />
     {/* Union Jack Canton */}
     <rect x="0" y="0" width="16" height="16" fill="#00247d" />
@@ -49,7 +49,7 @@ const AustraliaFlag = () => (
 );
 
 const ColombiaFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect x="0" y="0" width="32" height="16" fill="#fcd116" />
     <rect x="0" y="16" width="32" height="8" fill="#003893" />
     <rect x="0" y="24" width="32" height="8" fill="#ce1126" />
@@ -57,7 +57,7 @@ const ColombiaFlag = () => (
 );
 
 const AustriaFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect x="0" y="0" width="32" height="10.67" fill="#ed2939" />
     <rect x="0" y="10.67" width="32" height="10.66" fill="#ffffff" />
     <rect x="0" y="21.33" width="32" height="10.67" fill="#ed2939" />
@@ -65,7 +65,7 @@ const AustriaFlag = () => (
 );
 
 const NewZealandFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect width="32" height="32" fill="#00247d" />
     {/* Union Jack Canton */}
     <rect x="0" y="0" width="16" height="16" fill="#00247d" />
@@ -82,7 +82,7 @@ const NewZealandFlag = () => (
 );
 
 const ChinaFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect width="32" height="32" fill="#de2910" />
     {/* Big Star */}
     <polygon points="6.5,2 7.7,5.5 11.2,5.5 8.4,7.5 9.5,11 6.5,8.8 3.5,11 4.6,7.5 1.8,5.5 5.3,5.5" fill="#ffde00" />
@@ -95,7 +95,7 @@ const ChinaFlag = () => (
 );
 
 const UsaFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect width="32" height="32" fill="#bf0a30" />
     <path d="M0 2.46h32M0 7.38h32M0 12.3h32M0 17.22h32M0 22.14h32M0 27.06h32" stroke="#ffffff" strokeWidth="2.46" />
     <rect width="15" height="15" fill="#002868" />
@@ -111,7 +111,7 @@ const UsaFlag = () => (
 );
 
 const UkFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect width="32" height="32" fill="#012169" />
     <path d="M0 0L32 32M32 0L0 32" stroke="#ffffff" strokeWidth="5.5" />
     <path d="M0 0L32 32M32 0L0 32" stroke="#c8102e" strokeWidth="2.4" />
@@ -121,7 +121,7 @@ const UkFlag = () => (
 );
 
 const FranceFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect x="0" y="0" width="10.67" height="32" fill="#002654" />
     <rect x="10.67" y="0" width="10.66" height="32" fill="#ffffff" />
     <rect x="21.33" y="0" width="10.67" height="32" fill="#ed2939" />
@@ -129,7 +129,7 @@ const FranceFlag = () => (
 );
 
 const BulgariaFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect x="0" y="0" width="32" height="10.67" fill="#ffffff" />
     <rect x="0" y="10.67" width="32" height="10.66" fill="#00966e" />
     <rect x="0" y="21.33" width="32" height="10.67" fill="#d62612" />
@@ -137,7 +137,7 @@ const BulgariaFlag = () => (
 );
 
 const CanadaFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect x="0" y="0" width="8" height="32" fill="#ff0000" />
     <rect x="8" y="0" width="16" height="32" fill="#ffffff" />
     <rect x="24" y="0" width="8" height="32" fill="#ff0000" />
@@ -150,7 +150,7 @@ const CanadaFlag = () => (
 );
 
 const GermanyFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect x="0" y="0" width="32" height="10.67" fill="#000000" />
     <rect x="0" y="10.67" width="32" height="10.66" fill="#dd0000" />
     <rect x="0" y="21.33" width="32" height="10.67" fill="#ffce00" />
@@ -158,7 +158,7 @@ const GermanyFlag = () => (
 );
 
 const MalaysiaFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect width="32" height="32" fill="#cc0000" />
     <path d="M0 2.3h32M0 6.9h32M0 11.5h32M0 16.1h32M0 20.7h32M0 25.3h32M0 29.9h32" stroke="#ffffff" strokeWidth="2.3" />
     <rect width="16" height="16" fill="#010066" />
@@ -169,7 +169,7 @@ const MalaysiaFlag = () => (
 );
 
 const ThailandFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect x="0" y="0" width="32" height="5.33" fill="#a51931" />
     <rect x="0" y="5.33" width="32" height="5.33" fill="#f4f5f8" />
     <rect x="0" y="10.66" width="32" height="10.68" fill="#2d2a4a" />
@@ -179,7 +179,7 @@ const ThailandFlag = () => (
 );
 
 const CambodiaFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect x="0" y="0" width="32" height="8" fill="#032ea1" />
     <rect x="0" y="8" width="32" height="16" fill="#e00025" />
     <rect x="0" y="24" width="32" height="8" fill="#032ea1" />
@@ -189,7 +189,7 @@ const CambodiaFlag = () => (
 );
 
 const UaeFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect x="0" y="0" width="32" height="10.67" fill="#00732f" />
     <rect x="0" y="10.67" width="32" height="10.66" fill="#ffffff" />
     <rect x="0" y="21.33" width="32" height="10.67" fill="#000000" />
@@ -198,7 +198,7 @@ const UaeFlag = () => (
 );
 
 const SpainFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect x="0" y="0" width="32" height="8" fill="#aa151b" />
     <rect x="0" y="8" width="32" height="16" fill="#f1bf00" />
     <rect x="0" y="24" width="32" height="8" fill="#aa151b" />
@@ -207,7 +207,7 @@ const SpainFlag = () => (
 );
 
 const SwitzerlandFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect width="32" height="32" fill="#d52b1e" />
     <rect x="13" y="7" width="6" height="18" fill="#ffffff" rx="1" />
     <rect x="7" y="13" width="18" height="6" fill="#ffffff" rx="1" />
@@ -215,7 +215,7 @@ const SwitzerlandFlag = () => (
 );
 
 const JapanFlag = () => (
-  <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 rounded-full border border-black/10 shadow-inner">
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
     <rect width="32" height="32" fill="#ffffff" />
     <circle cx="16" cy="16" r="7.5" fill="#bc002d" />
   </svg>
@@ -228,10 +228,10 @@ const ROW_1_COUNTRIES: CountryItem[] = [
   { name: "Australia", flag: <AustraliaFlag /> },
   { name: "Colombia", flag: <ColombiaFlag /> },
   { name: "Austria", flag: <AustriaFlag /> },
-  { name: "New Zealand", flag: <NewZealandFlag /> },
+  // { name: "New Zealand", flag: <NewZealandFlag /> },
   { name: "China", flag: <ChinaFlag /> },
-  { name: "United States", flag: <UsaFlag /> },
-  { name: "United Kingdom", flag: <UkFlag /> },
+  { name: "USA", flag: <UsaFlag /> },
+  // { name: "United Kingdom", flag: <UkFlag /> },
   { name: "France", flag: <FranceFlag /> },
   { name: "Switzerland", flag: <SwitzerlandFlag /> },
   { name: "Japan", flag: <JapanFlag /> },
@@ -246,22 +246,22 @@ const ROW_2_COUNTRIES: CountryItem[] = [
   { name: "Malaysia", flag: <MalaysiaFlag /> },
   { name: "Thailand", flag: <ThailandFlag /> },
   { name: "Cambodia", flag: <CambodiaFlag /> },
-  { name: "United Arab Emirates", flag: <UaeFlag /> },
+  { name: "UAE", flag: <UaeFlag /> },
   { name: "Spain", flag: <SpainFlag /> },
   { name: "Austria", flag: <AustriaFlag /> },
   { name: "Australia", flag: <AustraliaFlag /> },
-  { name: "New Zealand", flag: <NewZealandFlag /> },
+  // { name: "New Zealand", flag: <NewZealandFlag /> },
 ];
 
 export default function ChartersBenefits() {
   return (
     <section
       id="charters-benefits"
-      className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-white py-20 "
     >
       <div className="mx-auto max-w-[1200px] px-6 text-center sm:px-10">
         {/* Main Section Heading */}
-        <h2 className="text-[30px] font-bold tracking-[-0.025em] text-[#141724] sm:text-[38px] lg:text-[44px]">
+        <h2 className="text-[30px] font-semibold tracking-[-0.045em] text-[#141724] sm:text-[38px] lg:text-[44px]">
           Explore our Jetly Charters Benefits
         </h2>
       </div>
@@ -285,10 +285,10 @@ export default function ChartersBenefits() {
             {ROW_1_COUNTRIES.map((item, idx) => (
               <div
                 key={`r1-a-${idx}`}
-                className="group flex items-center gap-3 rounded-full border border-[#e4e8f1] bg-white px-5 py-2.5 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#ccd4e4] hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] cursor-pointer select-none"
+                className="group flex items-center gap-3 rounded-full border border-[#e4e8f1] bg-white px-3 py-3 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#ccd4e4] hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] cursor-pointer select-none"
               >
                 {item.flag}
-                <span className="text-[14.5px] font-semibold text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e] sm:text-[15px]">
+                <span className="text-[14.5px] font-medium text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e] sm:text-[18px]">
                   {item.name}
                 </span>
               </div>
@@ -298,10 +298,10 @@ export default function ChartersBenefits() {
             {ROW_1_COUNTRIES.map((item, idx) => (
               <div
                 key={`r1-b-${idx}`}
-                className="group flex items-center gap-3 rounded-full border border-[#e4e8f1] bg-white px-5 py-2.5 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#ccd4e4] hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] cursor-pointer select-none"
+                className="group flex items-center gap-3 rounded-full border border-[#e4e8f1] bg-white px-3 py-3 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#ccd4e4] hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] cursor-pointer select-none"
               >
                 {item.flag}
-                <span className="text-[14.5px] font-semibold text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e] sm:text-[15px]">
+                <span className="text-[14.5px] font-medium text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e] sm:text-[18px]">
                   {item.name}
                 </span>
               </div>
@@ -310,16 +310,16 @@ export default function ChartersBenefits() {
         </div>
 
         {/* Row 2: Marquee to the RIGHT */}
-        <div className="mt-3.5 sm:mt-5 flex overflow-hidden py-2">
+        <div className="mt-3.5  flex overflow-hidden py-2">
           <div className="animate-marquee-right flex items-center gap-4 sm:gap-5">
             {/* Set 1 */}
             {ROW_2_COUNTRIES.map((item, idx) => (
               <div
                 key={`r2-a-${idx}`}
-                className="group flex items-center gap-3 rounded-full border border-[#e4e8f1] bg-white px-5 py-2.5 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#ccd4e4] hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] cursor-pointer select-none"
+                className="group flex items-center gap-3 rounded-full border border-[#e4e8f1] bg-white px-3 py-3 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#ccd4e4] hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] cursor-pointer select-none"
               >
                 {item.flag}
-                <span className="text-[14.5px] font-semibold text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e] sm:text-[15px]">
+                <span className="text-[14.5px] font-medium text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e] sm:text-[18px]">
                   {item.name}
                 </span>
               </div>
@@ -329,10 +329,10 @@ export default function ChartersBenefits() {
             {ROW_2_COUNTRIES.map((item, idx) => (
               <div
                 key={`r2-b-${idx}`}
-                className="group flex items-center gap-3 rounded-full border border-[#e4e8f1] bg-white px-5 py-2.5 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#ccd4e4] hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] cursor-pointer select-none"
+                className="group flex items-center gap-3 rounded-full border border-[#e4e8f1] bg-white px-3 py-3 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#ccd4e4] hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] cursor-pointer select-none"
               >
                 {item.flag}
-                <span className="text-[14.5px] font-semibold text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e] sm:text-[15px]">
+                <span className="text-[14.5px] font-medium text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e] sm:text-[18px]">
                   {item.name}
                 </span>
               </div>
@@ -346,7 +346,7 @@ export default function ChartersBenefits() {
         {/* Red CTA Button */}
         <Link
           href="#services"
-          className="inline-flex items-center gap-2 rounded-[6px] bg-[#e03a3e] px-7 py-3.5 text-[12.5px] font-bold uppercase tracking-wider text-white shadow-[0_6px_20px_rgba(224,58,62,0.35)] transition-all duration-200 hover:bg-[#c62828] hover:shadow-[0_8px_24px_rgba(224,58,62,0.45)]"
+          className="inline-flex items-center gap-2 rounded-[6px] bg-[#e03a3e] px-5 py-2.5 text-[12.5px] font-bold uppercase tracking-wider text-white shadow-[0_6px_20px_rgba(224,58,62,0.35)] transition-all duration-200 hover:bg-[#c62828] hover:shadow-[0_8px_24px_rgba(224,58,62,0.45)]"
         >
           <span>EXPLORE SERVICES</span>
           <span aria-hidden="true">&gt;</span>
@@ -355,7 +355,7 @@ export default function ChartersBenefits() {
         {/* Outline CTA Button */}
         <Link
           href="#about"
-          className="inline-flex items-center gap-2 rounded-[6px] border border-[#141724] bg-white px-7 py-3.5 text-[12.5px] font-bold uppercase tracking-wider text-[#141724] shadow-sm transition-all duration-200 hover:bg-[#141724] hover:text-white"
+          className="inline-flex items-center gap-2 rounded-[6px] border border-[#141724] bg-white px-5 py-2.5 text-[12.5px] font-bold uppercase tracking-wider text-[#141724] shadow-sm transition-all duration-200 hover:bg-[#141724] hover:text-white"
         >
           <span>LEARN MORE</span>
           <span aria-hidden="true">&gt;</span>
