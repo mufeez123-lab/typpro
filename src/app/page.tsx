@@ -5,6 +5,7 @@ import ChartersBenefits from "@/components/ChartersBenefits";
 import CompanySetupProcess from "@/components/CompanySetupProcess";
 import Contact from "@/components/Contact";
 import EmptyLegs from "@/components/EmptyLegs";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Quality from "@/components/Quality";
@@ -28,6 +29,7 @@ export default function Home() {
       <SuccessStories />
       <BlogNews />
       {/* <Contact /> */}
+      <Footer />
     </main>
   );
 }

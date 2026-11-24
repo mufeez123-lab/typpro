@@ -106,7 +106,7 @@ export default function SuccessStories() {
   return (
     <section
       id="success-stories"
-      className="relative overflow-hidden bg-[#fafbfe] py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-[#fafbfe] py-6"
     >
       <div className="mx-auto max-w-[1240px] px-6 sm:px-10 lg:px-12">
         {/* Top Header Row */}

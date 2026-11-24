@@ -37,7 +37,7 @@ const BLOG_POSTS: BlogPost[] = [
     commentsCount: 5,
     title: "Inside a Private Jet What to Expect on Your First Flight",
     image:
-      "https://images.unsplash.com/photo-1519074069444-1ba4ea16e6f9?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=900&q=85",
     alt: "Private jet on airport tarmac with luxury traveler",
     slug: "#",
   },
@@ -59,9 +59,9 @@ export default function BlogNews() {
   return (
     <section
       id="blog-news"
-      className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-white py-8"
     >
-      <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-12">
+      <div className="mx-auto max-w-[1840px] px-6 sm:px-10 lg:px-12">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-14">
           {/* Left Column: Heading, Subtitle, CTA Button & Jet Watermark */}
           <div className="flex flex-col justify-between lg:col-span-3">
@@ -75,12 +75,12 @@ export default function BlogNews() {
               </div>
 
               {/* Main Heading */}
-              <h2 className="mt-4 text-[30px] font-bold leading-[1.14] tracking-[-0.025em] text-[#141724] sm:text-[38px] lg:text-[40px]">
-                Aviation Insights for Private Charter Travelers Fly
+              <h2 className="mt-4 text-[30px] font-semibold leading-[1.14] tracking-[-0.025em] text-[#141724] sm:text-[38px] ">
+                Blogs of Our Company
               </h2>
 
               {/* Subtitle Description */}
-              <p className="mt-5 max-w-[340px] text-[13px] font-normal leading-[1.72] text-[#646a80] sm:text-[13.5px]">
+              <p className="mt-5 max-w-[340px] text-[13px] font-normal leading-[1.72] text-[#646a80] sm:text-[10.5px]">
                 We provide expert advice to help you make informed decisions about chartering,
                 and premium in-flight experiences.
               </p>
@@ -89,7 +89,7 @@ export default function BlogNews() {
               <div className="mt-8">
                 <Link
                   href="#blog"
-                  className="inline-flex items-center gap-2 rounded-[6px] bg-[#e03a3e] px-7 py-3.5 text-[12.5px] font-bold uppercase tracking-wider text-white shadow-[0_6px_20px_rgba(224,58,62,0.35)] transition-all duration-200 hover:bg-[#c62828] hover:shadow-[0_8px_24px_rgba(224,58,62,0.45)]"
+                  className="inline-flex items-center gap-2 rounded-[6px] bg-[#e03a3e] px-4 py-2 text-[12.5px] font-bold uppercase tracking-wider text-white shadow-[0_6px_20px_rgba(224,58,62,0.35)] transition-all duration-200 hover:bg-[#c62828] hover:shadow-[0_8px_24px_rgba(224,58,62,0.45)]"
                 >
                   <span>VIEW MORE</span>
                   <span aria-hidden="true">&gt;</span>
@@ -97,33 +97,7 @@ export default function BlogNews() {
               </div>
             </div>
 
-            {/* Decorative Jet Wireframe Watermark Illustration */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none mt-10 hidden w-full max-w-[280px] select-none text-[#e2e7f0] opacity-80 lg:block"
-            >
-              <svg
-                viewBox="0 0 280 140"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-full"
-              >
-                {/* Airplane fuselage */}
-                <path d="M20 110L90 85L220 50C250 42 265 40 260 48C255 56 230 70 200 85L120 115L20 110Z" />
-                {/* Wings */}
-                <path d="M125 90L190 20L170 18L100 80" />
-                <path d="M140 102L180 135L170 136L125 106" />
-                {/* Tail fin */}
-                <path d="M35 107L15 75L28 73L55 102" />
-                {/* Speed accent lines */}
-                <path d="M5 125L60 118" strokeDasharray="4 4" strokeWidth="1" />
-                <path d="M30 135L90 126" strokeDasharray="4 4" strokeWidth="1" />
-                <path d="M150 15L210 5" strokeDasharray="4 4" strokeWidth="1" />
-              </svg>
-            </div>
+
           </div>
 
           {/* Right Column: 3 Blog Post Cards */}
@@ -146,14 +120,14 @@ export default function BlogNews() {
                     />
 
                     {/* Red Date Badge (Bottom Right) */}
-                    <div className="absolute bottom-3 right-3 z-10 flex min-w-[54px] flex-col items-center justify-center rounded-[8px] bg-[#e03a3e] px-2.5 py-1.5 text-center text-white shadow-md">
+                    {/* <div className="absolute bottom-3 right-3 z-10 flex min-w-[54px] flex-col items-center justify-center rounded-[8px] bg-[#e03a3e] px-2.5 py-1.5 text-center text-white shadow-md">
                       <span className="text-[17px] font-bold leading-none tracking-tight">
                         {post.day}
                       </span>
                       <span className="mt-0.5 text-[10px] font-medium leading-none tracking-wide text-white/95">
                         {post.month}
                       </span>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Metadata Row: Author & Comments */}
@@ -161,7 +135,7 @@ export default function BlogNews() {
                     {/* Author */}
                     <div className="inline-flex items-center gap-1.5">
                       <svg
-                        className="h-3.5 w-3.5 text-[#e03a3e]"
+                        className="h-3 w-3 text-[#e03a3e]"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -180,7 +154,7 @@ export default function BlogNews() {
                     {/* Comments */}
                     <div className="inline-flex items-center gap-1.5">
                       <svg
-                        className="h-3.5 w-3.5 text-[#e03a3e]"
+                        className="h-3 w-3 text-[#e03a3e]"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -195,16 +169,16 @@ export default function BlogNews() {
                   </div>
 
                   {/* Blog Post Title */}
-                  <h3 className="mt-3 text-[16px] font-bold leading-snug tracking-[-0.015em] text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e] sm:text-[17px]">
+                  <h3 className="mt-3 text-[12px] font-medium leading-snug tracking-[-0.015em] text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e] sm">
                     <Link href={post.slug}>{post.title}</Link>
                   </h3>
                 </div>
 
                 {/* Read More Link */}
-                <div className="mt-5 pt-1">
+                <div className="pt-2">
                   <Link
                     href={post.slug}
-                    className="inline-flex items-center gap-1.5 text-[11.5px] font-bold uppercase tracking-wider text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e]"
+                    className="inline-flex items-center gap-1.5 text-[8px] font-semibold uppercase tracking-wider text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e]"
                   >
                     <span>READ MORE</span>
                     <span
