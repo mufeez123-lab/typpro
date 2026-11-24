@@ -56,10 +56,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#d700000] px-4 pb-8 pt-16 sm:px-6 sm:pt-20 lg:px-8 lg:pt-24">
+    <footer className="relative bg-[#d70000] px-4 pb-8 pt-16 sm:px-6 sm:pt-20 lg:px-8 lg:pt-24">
       <div className="mx-auto max-w-[1340px]">
         {/* Rounded White Card Container */}
-        <div className="relative overflow-hidden rounded-[26px] bg-white px-7 py-12 shadow-[0_24px_60px_rgba(0,0,0,0.45)] sm:rounded-[32px] sm:px-11 sm:py-14 lg:px-14 lg:py-16">
+        <div className="relative overflow-hidden rounded-[26px] bg-white px-7 py-12  sm:rounded-[32px] sm:px-11 sm:py-14 lg:px-14 lg:py-16">
           {/* Giant Pale-Blush Background Watermark */}
           <div
             aria-hidden="true"
@@ -114,7 +114,7 @@ export default function Footer() {
                   />
                   <button
                     type="submit"
-                    className="inline-flex shrink-0 cursor-pointer items-center gap-1.5 text-[11.5px] font-semibold uppercase tracking-[0.06em] text-[#c8102e] transition-colors hover:text-[#9e1422]"
+                    className="inline-flex shrink-0 cursor-pointer items-center gap-1.5 text-[11.5px] font-semibold uppercase tracking-[0.06em] text-[#c8102e] transition-colors hover:text-[#d70000]"
                   >
                     <span>{subscribed ? "SENT" : "SUBSCRIBE"}</span>
                     <svg
@@ -135,7 +135,7 @@ export default function Footer() {
                 </form>
 
                 {subscribed && (
-                  <p className="mt-2 text-[12px] font-medium text-[#9e1422]">
+                  <p className="mt-2 text-[12px] font-medium text-[#d70000]">
                     Thank you for subscribing.
                   </p>
                 )}

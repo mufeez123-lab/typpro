@@ -135,7 +135,7 @@ export default function Quality() {
               {/* Top-Right Red Curved Corner Badge */}
               <div
                 aria-hidden="true"
-                className="absolute right-2 top-2 flex h-14 w-14 items-center justify-center rounded-bl-[44px] rounded-tr-[8px] bg-[#e03a3e] text-[16px] font-bold text-white shadow-sm transition-colors duration-200 group-hover:bg-[#c62828]"
+                className="absolute right-2 top-2 flex h-14 w-14 items-center justify-center rounded-bl-[44px] rounded-tr-[8px] bg-[#d70000] text-[16px] font-bold text-white shadow-sm transition-colors duration-200 group-hover:bg-[#c62828]"
               >
                 <span>{step.number}</span>
               </div>

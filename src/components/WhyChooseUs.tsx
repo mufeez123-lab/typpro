@@ -14,7 +14,7 @@ const STATS = [
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="text-[#9e1422]"
+        className="text-[#d70000]"
         aria-hidden="true"
       >
         <circle
@@ -64,7 +64,7 @@ const STATS = [
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="text-[#9e1422]"
+        className="text-[#d70000]"
         aria-hidden="true"
       >
         {/* Document / certificate sheet */}
@@ -131,7 +131,7 @@ const STATS = [
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="text-[#9e1422]"
+        className="text-[#d70000]"
         aria-hidden="true"
       >
         <path
@@ -160,7 +160,7 @@ const STATS = [
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="text-[#9e1422]"
+        className="text-[#d70000]"
         aria-hidden="true"
       >
         <path
@@ -205,9 +205,9 @@ export default function WhyChooseUs() {
             <div className="inline-flex items-center gap-2">
               <span
                 aria-hidden="true"
-                className="h-[5px] w-[5px] rounded-full bg-[#9e1422]"
+                className="h-[5px] w-[5px] rounded-full bg-[#d70000]"
               />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.06em] text-[#9e1422]">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.06em] text-[#d70000]">
                 WHY CHOOSE US.
               </span>
             </div>
@@ -215,7 +215,7 @@ export default function WhyChooseUs() {
 
           {/* Right Heading & Copy */}
           <div className="lg:col-span-6">
-            <h2 className="text-[30px] font-medium leading-[1.18] tracking-[-0.02em] text-[#9e1422] sm:text-[34px] lg:text-[36px]">
+            <h2 className="text-[30px] font-medium leading-[1.18] tracking-[-0.02em] text-[#d70000] sm:text-[34px] lg:text-[36px]">
               Empowering Your Business Vision in the UAE.
             </h2>
 
@@ -238,12 +238,12 @@ export default function WhyChooseUs() {
               </div> */}
 
               {/* Large Crimson Stat Figure */}
-              <p className="mt-7 text-[44px] font-medium leading-none tracking-[-0.02em] text-[#9e1422] sm:text-[48px] lg:text-[52px]">
+              <p className="mt-7 text-[44px] font-medium leading-none tracking-[-0.02em] text-[#d70000] sm:text-[48px] lg:text-[52px]">
                 <Counter value={stat.value} />
               </p>
 
               {/* Uppercase Crimson Caption */}
-              <p className="mt-3.5 text-[10.5px] font-medium uppercase tracking-[0.06em] text-[#9e1422] sm:text-[11px]">
+              <p className="mt-3.5 text-[10.5px] font-medium uppercase tracking-[0.06em] text-[#d70000] sm:text-[11px]">
                 {stat.label}
               </p>
             </div>

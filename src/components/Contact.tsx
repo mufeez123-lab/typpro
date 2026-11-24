@@ -65,15 +65,15 @@ export default function Contact({ extraClassName = "" }: ContactProps) {
       {/* =========================================================================
           SECTION 1: Top Hero Header
           ========================================================================= */}
-      <section className=" px-6 pt-10 pb-12 sm:px-22 sm:pt-14 sm:pb-16  bg-[#d70000]">
+      <section className=" px-6 pt-10 pb-12 sm:px-22 sm:pt-14 sm:pb-16 h-[55vh]  bg-[#d70000] -mt-[120px]">
         {/* Small uppercase tag with diagonal arrow */}
         <Link
           href="#form"
-          className="inline-flex items-center gap-1.5 text-[12px] font-bold tracking-wider text-white uppercase hover:opacity-80 transition-opacity"
+          className="inline-flex items-center mt-16 group absolute gap-1.5 text-[12px] font-bold tracking-wider text-white uppercase hover:opacity-80 transition-opacity"
         >
           <span>ABOUT US</span>
           <svg
-            className="h-3.5 w-3.5"
+            className="h-3.5 w-3.5 group-hover:rotate-45 transition-transform duration-300"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -84,7 +84,7 @@ export default function Contact({ extraClassName = "" }: ContactProps) {
         </Link>
 
         {/* 2-Column Header Grid */}
-        <div className="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-12 lg:items-start">
+        <div className="mt-23 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-12 lg:items-start">
           {/* Main Large Headline */}
           <div className="lg:col-span-6">
             <h1 className="text-[32px] font-bold leading-[1.18] tracking-[-0.03em] text-white sm:text-[40px] lg:text-[46px]">
@@ -94,7 +94,7 @@ export default function Contact({ extraClassName = "" }: ContactProps) {
 
           {/* Right Explanatory Paragraph */}
           <div className="lg:col-span-5 lg:pt-2 items-center">
-            <p className="text-[13.5px] font-normal leading-[1.7] text-white sm:text-[14.5px] ">
+            <p className="text-[13.5px] font-normal leading-[1.7] text-white sm:text-[14.5px] mt-10">
               We blend strategy, creativity, and technology to help brands grow, connect, and
               stand out in an ever-evolving digital world.
             </p>
@@ -302,7 +302,7 @@ export default function Contact({ extraClassName = "" }: ContactProps) {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="mt-2 flex w-full items-center justify-center gap-2 rounded-full bg-black py-3.5 text-center text-[12px] font-bold tracking-widest text-white uppercase hover:bg-neutral-800 transition-colors shadow-sm cursor-pointer disabled:opacity-75"
+                  className="mt-2 flex w-full items-center justify-center gap-2 rounded-[6px] bg-[#d70000] py-3.5 text-center text-[12px] font-bold tracking-widest text-white uppercase hover:bg-white  hover:text-[#d70000]   hover:border-1 transition-colors shadow-sm cursor-pointer disabled:opacity-75"
                 >
                   <span>{loading ? "SENDING..." : "→ SEND MESSAGE"}</span>
                 </button>

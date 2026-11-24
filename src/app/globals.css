@@ -57,4 +57,20 @@ body {
   will-change: transform;
 }
 
+@keyframes navbarSlideDown {
+  0% {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animate-navbar-slide-down {
+  animation: navbarSlideDown 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
 

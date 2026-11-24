@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import {
   BUSINESS_SETUP_MENU,
@@ -18,17 +19,17 @@ interface NavLinkItem {
 }
 
 const NAV_ITEMS: NavLinkItem[] = [
-  { label: "Home", href: "#home", type: "link" },
-  { label: "About", href: "#about", type: "link" },
+  { label: "Home", href: "/", type: "link" },
+  { label: "About", href: "/#about", type: "link" },
   {
     label: "Business Setup",
-    href: "#business-setup",
+    href: "/#business-setup",
     type: "mega",
     columns: BUSINESS_SETUP_MENU,
   },
   {
     label: "Services",
-    href: "#services",
+    href: "/#services",
     type: "mega",
     columns: SERVICES_MENU,
   },
@@ -40,7 +41,7 @@ const NAV_ITEMS: NavLinkItem[] = [
   { label: "Contact Us", href: "/contact", type: "link" },
 ];
 
-function TypproLogo() {
+function TypproLogo({ isSticky }: { isSticky?: boolean }) {
   return (
     <Link
       href="/"
@@ -53,13 +54,17 @@ function TypproLogo() {
         width={1024}
         height={652}
         priority
-        className="h-[46px] w-auto object-contain transition-opacity duration-200 group-hover:opacity-90 sm:h-[62px]"
+        className={`w-auto object-contain transition-all duration-300 group-hover:opacity-90 ${
+          isSticky ? "h-[40px] sm:h-[52px]" : "h-[46px] sm:h-[62px]"
+        }`}
       />
     </Link>
   );
 }
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const [isSticky, setIsSticky] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -70,6 +75,21 @@ export default function Navbar() {
   });
 
   const leaveTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Scroll detection matching printlabdubai.com sticky slide-down animation
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 160) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleMouseEnter = (label: string) => {
     if (leaveTimerRef.current) {
@@ -110,12 +130,26 @@ export default function Navbar() {
     }));
   };
 
+  const isSubpage = pathname !== "/";
+
   return (
-    <header className="absolute inset-x-0 top-0 z-40 border-b border-white/25">
-      <div className="relative mx-auto flex h-[86px] max-w-[1440px] items-center  justify-between px-6 sm:px-10 lg:px-14">
+    <header
+      className={
+        isSticky
+          ? "fixed inset-x-0 top-0 z-50 bg-[#d70000] shadow-[0_8px_30px_rgba(0,0,0,0.18)] border-b border-[#b50000] animate-navbar-slide-down"
+          : isSubpage
+          ? "absolute inset-x-0 top-0 z-40 bg-[#d70000] border-b border-white/20 shadow-sm"
+          : "absolute inset-x-0 top-0 z-40 bg-transparent border-b border-white/25"
+      }
+    >
+      <div
+        className={`relative mx-auto flex max-w-[1440px] items-center justify-between px-6 sm:px-10 lg:px-14 ${
+          isSticky ? "h-[74px] sm:h-[78px]" : "h-[86px]"
+        }`}
+      >
         {/* Left: Brand Logo */}
         <div className="flex items-center">
-          <TypproLogo />
+          <TypproLogo isSticky={isSticky} />
         </div>
 
         {/* Center: Primary Navigation with Mega Menu & Dropdown */}
@@ -144,7 +178,9 @@ export default function Navbar() {
                     setActiveLink(item.label);
                     setHoveredMenu(null);
                   }}
-                  className={`group relative flex h-[86px] items-center gap-1.5 text-[13px] font-medium tracking-[0.01em] transition-colors ${
+                  className={`group relative flex items-center gap-1.5 text-[13px] font-medium tracking-[0.01em] ${
+                    isSticky ? "h-[74px] sm:h-[78px]" : "h-[86px]"
+                  } ${
                     isHovered || isActive ? "text-white" : "text-white/95 hover:text-white"
                   }`}
                 >
@@ -189,7 +225,9 @@ export default function Navbar() {
                   <div
                     onMouseEnter={() => handleMouseEnter(item.label)}
                     onMouseLeave={handleMouseLeave}
-                    className="absolute left-1/2 top-[82px] z-50 w-72 -translate-x-1/2 pt-2 animate-in fade-in slide-in-from-top-2 duration-150"
+                    className={`absolute left-1/2 z-50 w-72 -translate-x-1/2 pt-2 animate-in fade-in slide-in-from-top-2 duration-150 transition-all duration-300 ${
+                      isSticky ? "top-[70px]" : "top-[82px]"
+                    }`}
                   >
                     {/* Hover Bridge */}
                     <div className="absolute -top-3 left-0 right-0 h-3" />
@@ -313,7 +351,9 @@ export default function Navbar() {
             if (hoveredMenu) handleMouseEnter(hoveredMenu);
           }}
           onMouseLeave={handleMouseLeave}
-          className="absolute left-1/2 top-[78px] z-50 w-[calc(100vw-3rem)] max-w-[1360px] -translate-x-1/2 pt-2 transition-all duration-200"
+          className={`absolute left-1/2 z-50 w-[calc(100vw-3rem)] max-w-[1360px] -translate-x-1/2 pt-2 transition-all duration-300 ${
+            isSticky ? "top-[68px]" : "top-[78px]"
+          }`}
         >
           {/* Hover Bridge to keep cursor connected between header and menu */}
           <div className="absolute -top-3 left-0 right-0 h-3" />

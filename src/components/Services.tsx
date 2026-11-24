@@ -218,7 +218,7 @@ export default function Services() {
                   <div className="mt-6 pt-1">
                     <Link
                       href={service.href}
-                      className="group/link inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#191c28] transition-colors hover:text-[#9e1422] sm:text-[11.5px]"
+                      className="group/link inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#191c28] transition-colors hover:text-[#d70000] sm:text-[11.5px]"
                     >
                       <span>READ MORE</span>
                       <span

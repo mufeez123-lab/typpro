@@ -398,7 +398,7 @@ export default function ChartersBenefits() {
         {/* Red CTA Button */}
         <Link
           href="#services"
-          className="inline-flex items-center gap-2 rounded-[6px] bg-[#e03a3e] px-5 py-2.5 text-[12.5px] font-bold uppercase tracking-wider text-white shadow-[0_6px_20px_rgba(224,58,62,0.35)] transition-all duration-200 hover:bg-[#c62828] hover:shadow-[0_8px_24px_rgba(224,58,62,0.45)]"
+          className="inline-flex items-center gap-2 rounded-[6px] bg-[#d70000] px-5 py-2.5 text-[12.5px] font-bold uppercase tracking-wider text-white shadow-[0_6px_20px_rgba(224,58,62,0.35)] transition-all duration-200 hover:bg-[#c62828] hover:shadow-[0_8px_24px_rgba(224,58,62,0.45)]"
         >
           <span>EXPLORE SERVICES</span>
           <span aria-hidden="true">&gt;</span>

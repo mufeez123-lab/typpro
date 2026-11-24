@@ -71,7 +71,7 @@ export default function BlogNews() {
                 <span className="text-[13px] font-bold tracking-wider text-[#e03a3e]">
                   Blog &amp; News
                 </span>
-                <span className="h-[2px] w-10 bg-[#e03a3e]" />
+                <span className="h-[2px] w-10 bg-[#d70000]" />
               </div>
 
               {/* Main Heading */}
@@ -88,7 +88,7 @@ export default function BlogNews() {
               <div className="mt-8">
                 <Link
                   href="#blog"
-                  className="inline-flex items-center gap-2 rounded-[6px] bg-[#e03a3e] px-4 py-2 text-[12.5px] font-bold uppercase tracking-wider text-white shadow-[0_6px_20px_rgba(224,58,62,0.35)] transition-all duration-200 hover:bg-[#c62828] hover:shadow-[0_8px_24px_rgba(224,58,62,0.45)]"
+                  className="inline-flex items-center gap-2 rounded-[6px] bg-[#d70000] px-4 py-2 text-[12.5px] font-bold uppercase tracking-wider text-white shadow-[0_6px_20px_rgba(224,58,62,0.35)] transition-all duration-200 hover:bg-[#c62828] hover:shadow-[0_8px_24px_rgba(224,58,62,0.45)]"
                 >
                   <span>VIEW MORE</span>
                   <span aria-hidden="true">&gt;</span>
@@ -119,7 +119,7 @@ export default function BlogNews() {
                     />
 
                     {/* Red Date Badge (Bottom Right) */}
-                    {/* <div className="absolute bottom-3 right-3 z-10 flex min-w-[54px] flex-col items-center justify-center rounded-[8px] bg-[#e03a3e] px-2.5 py-1.5 text-center text-white shadow-md">
+                    {/* <div className="absolute bottom-3 right-3 z-10 flex min-w-[54px] flex-col items-center justify-center rounded-[8px] bg-[#d70000] px-2.5 py-1.5 text-center text-white shadow-md">
                       <span className="text-[17px] font-bold leading-none tracking-tight">
                         {post.day}
                       </span>

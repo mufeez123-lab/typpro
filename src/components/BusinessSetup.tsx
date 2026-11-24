@@ -59,9 +59,9 @@ export default function BusinessSetup() {
             <div className="inline-flex items-center gap-2">
               <span
                 aria-hidden="true"
-                className="h-[5px] w-[5px] rounded-full bg-[#9e1422]"
+                className="h-[5px] w-[5px] rounded-full bg-[#d70000]"
               />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.06em] text-[#9e1422]">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.06em] text-[#d70000]">
                 BUSINESS SETUP.
               </span>
             </div>
@@ -74,7 +74,7 @@ export default function BusinessSetup() {
           <div className="shrink-0">
             <Link
               href="#services"
-              className="inline-flex h-[42px] items-center justify-center rounded-[6px] bg-[#9e1422] px-6 text-[14px] font-medium text-white shadow-[0_8px_22px_rgba(158,20,34,0.22)] transition-all duration-200 hover:bg-[#820f1b] hover:shadow-[0_12px_28px_rgba(158,20,34,0.3)]"
+              className="inline-flex h-[42px] items-center justify-center rounded-[6px] bg-[#d70000] px-6 text-[14px] font-medium text-white shadow-[0_8px_22px_rgba(158,20,34,0.22)] transition-all duration-200 hover:bg-[#820f1b] hover:shadow-[0_12px_28px_rgba(158,20,34,0.3)]"
             >
               More Services
             </Link>
@@ -100,13 +100,13 @@ export default function BusinessSetup() {
               {/* Base dark gradient scrim */}
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#190507]/90 via-[#190507]/35 to-transparent transition-opacity duration-500"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#d70000]/90 via-[#d70000]/35 to-transparent transition-opacity duration-500"
               />
 
               {/* Hover-from-bottom deep crimson gradient layer */}
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 translate-y-full bg-gradient-to-t from-[#7d0d18]/90 via-[#4b080f]/15 to-transparent transition-transform duration-500 ease-out group-hover:translate-y-0"
+                className="pointer-events-none absolute inset-0 translate-y-full bg-gradient-to-t from-[#d70000]/90 via-[#d70000]/35 to-transparent transition-transform duration-500 ease-out group-hover:translate-y-0"
               />
 
               {/* Bottom-aligned card content with smooth upward lift on hover */}

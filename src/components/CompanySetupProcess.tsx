@@ -161,7 +161,7 @@ export default function CompanySetupProcess() {
                 >
                   <span>Mainland</span>
                   {activeTab === "mainland" && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#e03a3e]" />
+                    <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#d70000]" />
                   )}
                 </button>
 
@@ -179,7 +179,7 @@ export default function CompanySetupProcess() {
                 >
                   <span>Free Zone</span>
                   {activeTab === "freezone" && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#e03a3e]" />
+                    <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#d70000]" />
                   )}
                 </button>
               </div>
@@ -345,7 +345,7 @@ export default function CompanySetupProcess() {
               {/* Calculate Button */}
               <Link
                 href="#contact"
-                className="mt-5 flex w-full items-center justify-center gap-1.5 rounded-[6px] bg-[#e03a3e] py-3.5 text-[13.5px] font-bold uppercase tracking-wider text-white shadow-[0_4px_14px_rgba(224,58,62,0.35)] transition-all duration-200 hover:bg-[#c62828] hover:shadow-[0_6px_18px_rgba(224,58,62,0.45)]"
+                className="mt-5 flex w-full items-center justify-center gap-1.5 rounded-[6px] bg-[#d70000] py-3.5 text-[13.5px] font-bold uppercase tracking-wider text-white shadow-[0_4px_14px_rgba(224,58,62,0.35)] transition-all duration-200 hover:bg-[#c62828] hover:shadow-[0_6px_18px_rgba(224,58,62,0.45)]"
               >
                 <span>CALCULATE NOW</span>
                 <span aria-hidden="true">&gt;</span>
