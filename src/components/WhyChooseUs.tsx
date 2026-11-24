@@ -5,8 +5,8 @@ import Counter from "./Counter";
 
 const STATS = [
   {
-    value: "50+",
-    label: "YEARS OF EXPERIENCE. YEARS OF EXPERIENCE YEARS OF EXPERIENCE",
+    value: "10K+",
+    label: "SUCCESSFUL BUSINESSES SETUP ACROSS UAE",
     icon: (
       <svg
         width="46"
@@ -55,8 +55,8 @@ const STATS = [
     ),
   },
   {
-    value: "3rd",
-    label: "TOP 100 US FINANCIAL ADVICE FIRMS.TOP 100 US FINANCIAL ADVICE FIRMS. ",
+    value: "100%",
+    label: "FOREIGN OWNERSHIP & FAST-TRACK APPROVALS",
     icon: (
       <svg
         width="46"
@@ -122,8 +122,37 @@ const STATS = [
     ),
   },
   {
-    value: "4/5",
-    label: "RATED 4.8* BY OUR CUSTOMERS. RATED 4.8* BY OUR CUSTOMERS",
+    value: "15+",
+    label: "YEARS OF PRO & LICENSING EXPERIENCE",
+    icon: (
+      <svg
+        width="46"
+        height="46"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="text-[#9e1422]"
+        aria-hidden="true"
+      >
+        <path
+          d="M16 3.5L25 7.5V15C25 21 16 26.5 16 26.5C16 26.5 7 21 7 15V7.5L16 3.5Z"
+          stroke="currentColor"
+          strokeWidth="1.2"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M12 15L15 18L20 12"
+          stroke="currentColor"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    value: "4.9/5",
+    label: "RATED 4.9★ BY 2,500+ GLOBAL ENTREPRENEURS",
     icon: (
       <svg
         width="46"
@@ -187,21 +216,17 @@ export default function WhyChooseUs() {
           {/* Right Heading & Copy */}
           <div className="lg:col-span-6">
             <h2 className="text-[30px] font-medium leading-[1.18] tracking-[-0.02em] text-[#9e1422] sm:text-[34px] lg:text-[36px]">
-              Make the difference.
+              Empowering Your Business Vision in the UAE.
             </h2>
 
             <p className="mt-5 max-w-[675px] text-[14px] font-normal leading-[1.68] text-[#222222] sm:text-[14.5px]">
-              We make the difference by combining deep skills and experience,  advanced technologies, and integrated approaches to help you drive
-             
-              success and realize a future filled with profound potential. The
-              core of our business is built on integrity, teamwork and providing
-              exceptional service.
+              At TYPPRO, we streamline your company formation journey from initial activity selection to full trade licensing, residency visa issuance, and corporate banking support. With comprehensive expertise across Dubai Mainland, Abu Dhabi, Sharjah, Ajman, and premier UAE Free Zones, we provide transparent guidance and complete peace of mind.
             </p>
           </div>
         </div>
 
-        {/* Bottom 3-Column Metrics Row */}
-        <div className="mx-auto mt-20 grid max-w-[960px] grid-cols-1 gap-12 text-center sm:mt-24 md:grid-cols-3 md:gap-8 lg:mt-28 lg:pb-8">
+        {/* Bottom 4-Column Metrics Row */}
+        <div className="mx-auto mt-20 grid max-w-[1240px] grid-cols-1 gap-10 text-center sm:mt-24 sm:grid-cols-2 lg:grid-cols-4 md:gap-8 lg:mt-28 lg:pb-8">
           {STATS.map((stat) => (
             <div
               key={stat.label}

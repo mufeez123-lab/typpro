@@ -28,7 +28,6 @@ export default function Home() {
       <ChartersBenefits />
       <SuccessStories />
       <BlogNews />
-      {/* <Contact /> */}
       <Footer />
     </main>
   );

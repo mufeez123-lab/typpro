@@ -26,18 +26,18 @@ export default function Hero() {
       </div>
 
       {/* Main Hero Content */}
-      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-16 pt-28 sm:px-10 md:pb-20 md:pt-32 lg:px-14">
-        <div className="max-w-[780px]">
-          <h1 className="text-[40px] font-medium leading-[1.08] tracking-[-0.028em] text-white sm:text-[54px] md:text-[62px] lg:text-[72px] ">
-            Helping you build and
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-16 pt-28 sm:px-10 md:pb-20 md:pt-0 lg:px-14">
+        <div className="max-w-[820px]">
+          <h1 className="text-[40px] font-semibold leading-[1.08] tracking-[-0.028em] text-white sm:text-[54px] md:text-[62px] lg:text-[72px] ">
+            Fast &amp; Reliable
             <br />
-            protect your wealth
+            Business Setup in UAE
             <span className="text-[#5d0c14]">.</span>
           </h1>
 
           <p className="mt-5 max-w-[640px] text-[13.5px] font-normal leading-[1.6] tracking-[0.005em] text-white/90 sm:text-[14.5px] md:text-[15px]">
-            Award-winning, financial planning rooted in trust, insight, and
-            lasting relationships.
+            Your trusted partner for Mainland, Free Zone, and Offshore company
+            formation, PRO services, trade licensing, document clearing, and Golden Visa solutions in Dubai &amp; across the UAE.
           </p>
 
           {/* Hero CTA Buttons */}
@@ -45,7 +45,7 @@ export default function Hero() {
             {/* Primary Solid White CTA */}
             <Link
               href="#services"
-              className="group inline-flex h-[42px] w-full items-center justify-between bg-white px-3 text-[14px] font-medium text-[#b5121d] shadow-[0_6px_20px_rgba(90,8,15,0.2)] transition-all duration-200 hover:bg-white/95 hover:shadow-[0_10px_28px_rgba(90,8,15,0.28)] sm:w-[250px]"
+              className="group inline-flex h-[42px] w-full items-center rounded-[6px] justify-between bg-white px-3 text-[14px] font-medium text-[#b5121d] shadow-[0_6px_20px_rgba(90,8,15,0.2)] transition-all duration-200 hover:bg-white/95 hover:shadow-[0_10px_28px_rgba(90,8,15,0.28)] sm:w-[250px]"
             >
               <span>How we can help</span>
               <svg
@@ -68,7 +68,7 @@ export default function Hero() {
             {/* Secondary Transparent Bordered CTA */}
             <Link
               href="#contact"
-              className="group inline-flex h-[42px] w-full items-center justify-between  border border-white/75 bg-white/[0.04] px-5 text-[13px] font-medium text-white backdrop-blur-[2px] transition-all duration-200 hover:border-white hover:bg-white/15 sm:w-[262px]"
+              className="group inline-flex h-[42px] w-full items-center justify-between rounded-[6px]  border border-white/75 bg-white/[0.04] px-5 text-[13px] font-medium text-white backdrop-blur-[2px] transition-all duration-200 hover:border-white hover:bg-white/15 sm:w-[262px]"
             >
               <span>Talk to our experts?</span>
               <svg

@@ -221,8 +221,56 @@ const JapanFlag = () => (
   </svg>
 );
 
+const IndiaFlag = () => (
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
+    <rect x="0" y="0" width="32" height="10.67" fill="#ff9933" />
+    <rect x="0" y="10.67" width="32" height="10.66" fill="#ffffff" />
+    <rect x="0" y="21.33" width="32" height="10.67" fill="#138808" />
+    {/* Ashoka Chakra */}
+    <circle cx="16" cy="16" r="3.6" fill="none" stroke="#000080" strokeWidth="0.8" />
+    <circle cx="16" cy="16" r="0.8" fill="#000080" />
+    <path
+      d="M16 12.4V19.6M12.4 16H19.6M13.5 13.5L18.5 18.5M13.5 18.5L18.5 13.5M12.7 14.5L19.3 17.5M14.5 12.7L17.5 19.3M12.7 17.5L19.3 14.5M17.5 12.7L14.5 19.3"
+      stroke="#000080"
+      strokeWidth="0.4"
+    />
+  </svg>
+);
+
+const SaudiArabiaFlag = () => (
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
+    <rect width="32" height="32" fill="#006c35" />
+    {/* Arabic Calligraphy Inscription Representation */}
+    <path
+      d="M8 12.5h16M9 10h14M10.5 14.5h11"
+      stroke="#ffffff"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+      strokeDasharray="2 1.2"
+    />
+    {/* Saudi Ceremonial Sword */}
+    <path
+      d="M7.5 19h15.5M23 18l2 1-2 1M10 17.5v3"
+      stroke="#ffffff"
+      strokeWidth="1.1"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const BangladeshFlag = () => (
+  <svg viewBox="0 0 32 32" className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner">
+    <rect width="32" height="32" fill="#006a4e" />
+    <circle cx="14.5" cy="16" r="7.5" fill="#f42a41" />
+  </svg>
+);
+
 // Marquee Row 1 Items (Moving to the LEFT)
 const ROW_1_COUNTRIES: CountryItem[] = [
+  { name: "India", flag: <IndiaFlag /> },
+  { name: "Bangladesh", flag: <BangladeshFlag /> },
+  { name: "Saudi Arabia", flag: <SaudiArabiaFlag /> },
   { name: "Afghanistan", flag: <AfghanistanFlag /> },
   { name: "Brazil", flag: <BrazilFlag /> },
   { name: "Australia", flag: <AustraliaFlag /> },
@@ -239,6 +287,9 @@ const ROW_1_COUNTRIES: CountryItem[] = [
 
 // Marquee Row 2 Items (Moving to the RIGHT)
 const ROW_2_COUNTRIES: CountryItem[] = [
+  { name: "Bangladesh", flag: <BangladeshFlag /> },
+  { name: "Saudi Arabia", flag: <SaudiArabiaFlag /> },
+  { name: "India", flag: <IndiaFlag /> },
   { name: "Brazil", flag: <BrazilFlag /> },
   { name: "Bulgaria", flag: <BulgariaFlag /> },
   { name: "Canada", flag: <CanadaFlag /> },
@@ -262,8 +313,9 @@ export default function ChartersBenefits() {
       <div className="mx-auto max-w-[1200px] px-6 text-center sm:px-10">
         {/* Main Section Heading */}
         <h2 className="text-[30px] font-semibold tracking-[-0.045em] text-[#141724] sm:text-[38px] lg:text-[44px]">
-          Explore our Jetly Charters Benefits
+          Countries We Help
         </h2>
+     
       </div>
 
       {/* Marquee Wrapper with soft edge gradient masks */}

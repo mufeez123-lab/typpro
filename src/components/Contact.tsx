@@ -1,362 +1,393 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
+import React, { useState } from "react";
 
 export interface ContactProps {
   extraClassName?: string;
 }
 
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+const FAQS: FaqItem[] = [
+  {
+    question: "How can consulting help my business grow?",
+    answer:
+      "Our specialized UAE business setup and PRO consulting simplifies company formation, ensures 100% legal compliance with DET and Free Zone authorities, expedites investor visas and corporate banking approvals, and saves up to 40% in operational setup costs.",
+  },
+  {
+    question: "What industries do you specialize in?",
+    answer:
+      "We specialize in commercial trading, professional consultancy, industrial manufacturing, e-commerce, digital technology, tourism, freight forwarding, and general trading across Dubai Mainland, Abu Dhabi, and over 40 UAE Free Zones.",
+  },
+  {
+    question: "How long does a typical consulting project take?",
+    answer:
+      "Initial trade name reservation and initial approvals can be secured within 24 to 48 hours. Full trade licensing, Ejari office registration, and establishment card issuance typically take 3 to 5 business days.",
+  },
+  {
+    question: "How much does business consulting cost?",
+    answer:
+      "Our transparent packages start from AED 9,500 for Free Zone setups and AED 14,500 for Mainland entities, inclusive of government fees, name reservation, initial approvals, and virtual desk tenancy with zero hidden fees.",
+  },
+];
+
 export default function Contact({ extraClassName = "" }: ContactProps) {
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     email: "",
-    phone: "",
-    service: "Private Jet Charter",
+    subject: "",
     message: "",
   });
 
+  const [activeFaq, setActiveFaq] = useState<number | null>(0);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate swift submission
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
     }, 600);
   };
 
+  const toggleFaq = (index: number) => {
+    setActiveFaq((prev) => (prev === index ? null : index));
+  };
+
   return (
-    <section
-      id="contact"
-      className={`contact-one relative overflow-hidden bg-[#f7f8fb] py-20 sm:py-24 lg:py-28 ${extraClassName}`}
-    >
-      {/* Decorative Subtle Background Compass / Plane Geometry */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-24 -top-24 select-none opacity-[0.04]"
-      >
-        <svg
-          width="600"
-          height="600"
-          viewBox="0 0 600 600"
-          fill="none"
-          stroke="#9e1422"
-          strokeWidth="1.5"
+    <div id="contact" className={`w-full  text-[#111827] ${extraClassName}`}>
+      {/* =========================================================================
+          SECTION 1: Top Hero Header
+          ========================================================================= */}
+      <section className=" px-6 pt-10 pb-12 sm:px-22 sm:pt-14 sm:pb-16  bg-[#d70000]">
+        {/* Small uppercase tag with diagonal arrow */}
+        <Link
+          href="#form"
+          className="inline-flex items-center gap-1.5 text-[12px] font-bold tracking-wider text-white uppercase hover:opacity-80 transition-opacity"
         >
-          <circle cx="300" cy="300" r="280" />
-          <circle cx="300" cy="300" r="200" strokeDasharray="4 4" />
-          <circle cx="300" cy="300" r="120" />
-          <line x1="300" y1="20" x2="300" y2="580" />
-          <line x1="20" y1="300" x2="580" y2="300" />
-        </svg>
-      </div>
+          <span>ABOUT US</span>
+          <svg
+            className="h-3.5 w-3.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H9M17 7V15" />
+          </svg>
+        </Link>
 
-      <div className="relative z-10 mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-14">
-        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-14">
-          {/* Left Column: Contact Information & Headings */}
-          <div className="lg:col-span-5 lg:pt-3">
-            {/* Eyebrow Tag */}
-            <div className="inline-flex items-center gap-2">
-              <span
-                aria-hidden="true"
-                className="h-[6px] w-[6px] rounded-full bg-[#9e1422]"
-              />
-              <span className="text-[11.5px] font-bold uppercase tracking-[0.08em] text-[#9e1422]">
-                CONTACT WITH US
-              </span>
-            </div>
-
-            {/* Main Headline */}
-            <h2 className="mt-3 text-[32px] font-bold leading-[1.16] tracking-[-0.025em] text-[#141724] sm:text-[38px] lg:text-[44px]">
-              Feel Free to Write Our Aviation &amp; Setup Experts
-            </h2>
-
-            {/* Copy */}
-            <p className="mt-5 text-[14px] font-normal leading-[1.72] text-[#555a6d] sm:text-[14.5px]">
-              Whether you are looking to charter a private jet, book an empty leg
-              deal, or establish and license your business in the UAE, our
-              dedicated team is available 24/7 to provide prompt, discreet, and
-              personalized assistance.
-            </p>
-
-            {/* Contact Info Items List */}
-            <div className="mt-10 space-y-6">
-              {/* Phone Info Block */}
-              <div className="group flex items-center gap-4 rounded-[14px] border border-[#e8ecf4] bg-white p-4 shadow-[0_4px_16px_rgba(15,23,42,0.03)] transition-all duration-300 hover:border-[#9e1422]/25 hover:shadow-md">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[10px] bg-[#faf5f5] text-[#9e1422] transition-colors duration-200 group-hover:bg-[#9e1422] group-hover:text-white">
-                  <svg
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <span className="block text-[11px] font-semibold uppercase tracking-[0.06em] text-[#8a91a5]">
-                    CALL 24/7 VIP CONCIERGE
-                  </span>
-                  <a
-                    href="tel:+97141234567"
-                    className="text-[15px] font-bold text-[#141724] transition-colors hover:text-[#9e1422]"
-                  >
-                    +971 4 123 4567 / +1 (234) 526 8880
-                  </a>
-                </div>
-              </div>
-
-              {/* Email Info Block */}
-              <div className="group flex items-center gap-4 rounded-[14px] border border-[#e8ecf4] bg-white p-4 shadow-[0_4px_16px_rgba(15,23,42,0.03)] transition-all duration-300 hover:border-[#9e1422]/25 hover:shadow-md">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[10px] bg-[#faf5f5] text-[#9e1422] transition-colors duration-200 group-hover:bg-[#9e1422] group-hover:text-white">
-                  <svg
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <span className="block text-[11px] font-semibold uppercase tracking-[0.06em] text-[#8a91a5]">
-                    EMAIL US DIRECTLY
-                  </span>
-                  <a
-                    href="mailto:support@typpro.com"
-                    className="text-[15px] font-bold text-[#141724] transition-colors hover:text-[#9e1422]"
-                  >
-                    support@typpro.com / info@typpro.com
-                  </a>
-                </div>
-              </div>
-
-              {/* Office Location Block */}
-              <div className="group flex items-center gap-4 rounded-[14px] border border-[#e8ecf4] bg-white p-4 shadow-[0_4px_16px_rgba(15,23,42,0.03)] transition-all duration-300 hover:border-[#9e1422]/25 hover:shadow-md">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[10px] bg-[#faf5f5] text-[#9e1422] transition-colors duration-200 group-hover:bg-[#9e1422] group-hover:text-white">
-                  <svg
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <span className="block text-[11px] font-semibold uppercase tracking-[0.06em] text-[#8a91a5]">
-                    DUBAI CORPORATE HEADQUARTERS
-                  </span>
-                  <span className="text-[14.5px] font-bold text-[#141724]">
-                    Gate Precinct 4, DIFC, Dubai, United Arab Emirates
-                  </span>
-                </div>
-              </div>
-            </div>
+        {/* 2-Column Header Grid */}
+        <div className="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-12 lg:items-start">
+          {/* Main Large Headline */}
+          <div className="lg:col-span-6">
+            <h1 className="text-[32px] font-bold leading-[1.18] tracking-[-0.03em] text-white sm:text-[40px] lg:text-[46px]">
+              We are a creative digital agency shaping meaningful experiences
+            </h1>
           </div>
 
-          {/* Right Column: Contact Form Box */}
-          <div className="lg:col-span-7">
-            <div className="rounded-[18px] border border-[#e8ecf4] bg-white p-7 shadow-[0_12px_45px_rgba(15,23,42,0.06)] sm:p-10">
-              <div className="mb-8">
-                <h3 className="text-[22px] font-bold tracking-tight text-[#141724] sm:text-[26px]">
-                  Send Us a Message
-                </h3>
-                <p className="mt-2 text-[13.5px] font-normal leading-[1.65] text-[#60657b]">
-                  Please complete the form below. A flight or business setup
-                  specialist will review your request and get in touch within 15
-                  minutes.
-                </p>
-              </div>
+          {/* Right Explanatory Paragraph */}
+          <div className="lg:col-span-5 lg:pt-2 items-center">
+            <p className="text-[13.5px] font-normal leading-[1.7] text-white sm:text-[14.5px] ">
+              We blend strategy, creativity, and technology to help brands grow, connect, and
+              stand out in an ever-evolving digital world.
+            </p>
+          </div>
+        </div>
+      </section>
 
-              {submitted ? (
-                <div className="rounded-[12px] border border-[#22c55e]/30 bg-[#22c55e]/10 p-6 text-center">
-                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#22c55e] text-white">
-                    <svg
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                  </div>
-                  <h4 className="mt-4 text-[18px] font-bold text-[#141724]">
-                    Thank you! Your message has been sent.
-                  </h4>
-                  <p className="mt-1.5 text-[13px] text-[#555a6d]">
-                    Our team will contact you shortly via phone or email.
-                  </p>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSubmitted(false);
-                      setFormData({
-                        name: "",
-                        email: "",
-                        phone: "",
-                        service: "Private Jet Charter",
-                        message: "",
-                      });
-                    }}
-                    className="mt-5 inline-block text-[12.5px] font-semibold text-[#9e1422] underline hover:text-[#820f1b]"
-                  >
-                    Send another inquiry
-                  </button>
-                </div>
-              ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  className="contact-one__form space-y-4"
+      {/* =========================================================================
+          SECTION 2: 3 Floating Info Cards on Soft Gray Band
+          ========================================================================= */}
+      <section className="w-full bg-[#f0f4f6] py-10 sm:py-12">
+        <div className="mx-auto max-w-[1180px] px-6 sm:px-10 lg:px-12">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+            {/* Card 1: Call Us */}
+            <div className="flex items-center gap-4 rounded-[16px] bg-white p-3 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-[#eef2f6]">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gray-100 text-[#d70000]">
+                <svg
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
                 >
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    {/* Full Name */}
-                    <div>
-                      <label className="mb-1.5 block text-[12px] font-semibold text-[#3b4154]">
-                        Your Name <span className="text-[#9e1422]">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="John Doe"
-                        value={formData.name}
-                        onChange={(e) =>
-                          setFormData({ ...formData, name: e.target.value })
-                        }
-                        className="w-full rounded-[8px] border border-[#dce2ec] bg-[#fafbfc] px-4 py-3 text-[13.5px] text-[#141724] transition-colors focus:border-[#9e1422] focus:bg-white focus:outline-none"
-                      />
-                    </div>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <span className="block text-[11.5px] font-medium text-[#6b7280]">
+                  Call Us 7/24
+                </span>
+                <a
+                  href="tel:+971568204558"
+                  className="text-[14.5px] font-bold text-[#111827] hover:text-[#0d9488] transition-colors"
+                >
+                  +971 56 820 4558
+                </a>
+              </div>
+            </div>
 
-                    {/* Email Address */}
-                    <div>
-                      <label className="mb-1.5 block text-[12px] font-semibold text-[#3b4154]">
-                        Email Address <span className="text-[#9e1422]">*</span>
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        placeholder="john@example.com"
-                        value={formData.email}
-                        onChange={(e) =>
-                          setFormData({ ...formData, email: e.target.value })
-                        }
-                        className="w-full rounded-[8px] border border-[#dce2ec] bg-[#fafbfc] px-4 py-3 text-[13.5px] text-[#141724] transition-colors focus:border-[#9e1422] focus:bg-white focus:outline-none"
-                      />
-                    </div>
-                  </div>
+            {/* Card 2: Location */}
+            <div className="flex items-center gap-4 rounded-[16px] bg-white p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-[#eef2f6]">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gray-100 text-[#d70000]">
+                <svg
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <span className="block text-[11.5px] font-medium text-[#6b7280]">
+                  Location
+                </span>
+                <span className="text-[13px] font-bold text-[#111827] leading-snug">
+                  Office 301–312, LEADER REAL ESTATE L.L.C, Al Souq Al Kabeer, Bur Dubai
+                </span>
+              </div>
+            </div>
 
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    {/* Phone Number */}
-                    <div>
-                      <label className="mb-1.5 block text-[12px] font-semibold text-[#3b4154]">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        placeholder="+971 50 123 4567"
-                        value={formData.phone}
-                        onChange={(e) =>
-                          setFormData({ ...formData, phone: e.target.value })
-                        }
-                        className="w-full rounded-[8px] border border-[#dce2ec] bg-[#fafbfc] px-4 py-3 text-[13.5px] text-[#141724] transition-colors focus:border-[#9e1422] focus:bg-white focus:outline-none"
-                      />
-                    </div>
-
-                    {/* Service Selection */}
-                    <div>
-                      <label className="mb-1.5 block text-[12px] font-semibold text-[#3b4154]">
-                        Interested In
-                      </label>
-                      <select
-                        value={formData.service}
-                        onChange={(e) =>
-                          setFormData({ ...formData, service: e.target.value })
-                        }
-                        className="w-full rounded-[8px] border border-[#dce2ec] bg-[#fafbfc] px-4 py-3 text-[13.5px] text-[#141724] transition-colors focus:border-[#9e1422] focus:bg-white focus:outline-none"
-                      >
-                        <option value="Private Jet Charter">
-                          Private Jet Charter
-                        </option>
-                        <option value="Empty Leg Deals">Empty Leg Deals</option>
-                        <option value="Company Setup in UAE">
-                          Company Setup in UAE
-                        </option>
-                        <option value="Cargo & Specialty Flights">
-                          Cargo &amp; Specialty Flights
-                        </option>
-                        <option value="Aviation Consultancy">
-                          Aviation Consultancy
-                        </option>
-                        <option value="Aircraft Sourcing & Sales">
-                          Aircraft Sourcing &amp; Sales
-                        </option>
-                      </select>
-                    </div>
-                  </div>
-
-                  {/* Message */}
-                  <div>
-                    <label className="mb-1.5 block text-[12px] font-semibold text-[#3b4154]">
-                      Message / Flight Request Details
-                    </label>
-                    <textarea
-                      rows={4}
-                      placeholder="Please tell us about your planned travel route, dates, passenger count, or business setup requirements..."
-                      value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
-                      className="w-full rounded-[8px] border border-[#dce2ec] bg-[#fafbfc] px-4 py-3 text-[13.5px] text-[#141724] transition-colors focus:border-[#9e1422] focus:bg-white focus:outline-none"
-                    />
-                  </div>
-
-                  {/* Submit Button */}
-                  <div className="pt-2">
-                    <button
-                      type="submit"
-                      disabled={loading}
-                      className="contact-one__btn inline-flex items-center justify-center gap-2 rounded-[8px] bg-[#9e1422] px-8 py-3.5 text-[13.5px] font-bold uppercase tracking-wider text-white shadow-[0_4px_16px_rgba(158,20,34,0.35)] transition-all duration-200 hover:bg-[#820f1b] hover:shadow-[0_6px_22px_rgba(158,20,34,0.45)] disabled:opacity-75"
-                    >
-                      {loading ? (
-                        <span>SENDING...</span>
-                      ) : (
-                        <>
-                          <span>SEND MESSAGE</span>
-                          <span aria-hidden="true">&gt;</span>
-                        </>
-                      )}
-                    </button>
-                  </div>
-                </form>
-              )}
+            {/* Card 3: Make a Quote */}
+            <div className="flex items-center gap-4 rounded-[16px] bg-white p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-[#eef2f6]">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gray-100 text-[#d70000]">
+                <svg
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <span className="block text-[11.5px] font-medium text-[#6b7280]">
+                  Make a Quote
+                </span>
+                <a
+                  href="mailto:tpdclearing@gmail.com"
+                  className="text-[14.5px] font-bold text-[#111827] hover:text-[#0d9488] transition-colors"
+                >
+                  tpdclearing@gmail.com
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* =========================================================================
+          SECTION 3: Interactive Google Map + SEND A MESSAGE Form Box
+          ========================================================================= */}
+      <section id="form" className="mx-auto max-w-[1140px] px-6 py-14 sm:px-10  lg:px-12 ">
+        <div className="rounded-[20px] bg-[#f8fafc] border border-[#edf2f7] p-3 shadow-sm">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 items-stretch">
+            {/* Left Column: Interactive Map */}
+            <div className="relative min-h-[420px] w-full rounded-[16px] overflow-hidden border border-[#e2e8f0] shadow-sm">
+              <iframe
+                title="Office Location Map"
+                src="https://maps.google.com/maps?q=Al%20Souq%20Al%20Kabeer%2C%20Bur%20Dubai%2C%20Dubai&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                className="h-full w-full min-h-[420px] border-0"
+                loading="lazy"
+                allowFullScreen
+              />
+
+              {/* Map Floating Badge */}
+            
+            </div>
+
+            {/* Right Column: SEND A MESSAGE Form */}
+            <div className="flex flex-col justify-center py-18" >
+              <h3 className="text-[16px] font-bold tracking-wider text-[#111827] uppercase">
+                SEND A MESSAGE
+              </h3>
+
+              <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+                {/* Row 1: Full name & Email address */}
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <div>
+                    <label className="block text-[11.5px] font-bold text-[#4b5563] mb-1.5">
+                      Full name*
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="Your name"
+                      value={formData.fullName}
+                      onChange={(e) =>
+                        setFormData({ ...formData, fullName: e.target.value })
+                      }
+                      className="w-full rounded-[6px] border border-[#e5e7eb] bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[11.5px] font-bold text-[#4b5563] mb-1.5">
+                      Email address*
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      placeholder="Your email"
+                      value={formData.email}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
+                      className="w-full rounded-[6px] border border-[#e5e7eb] bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors"
+                    />
+                  </div>
+                </div>
+
+                {/* Row 2: Subject */}
+                <div>
+                  <label className="block text-[11.5px] font-bold  text-[#4b5563] mb-1.5">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Topic or inquiry"
+                    value={formData.subject}
+                    onChange={(e) =>
+                      setFormData({ ...formData, subject: e.target.value })
+                    }
+                    className="w-full rounded-[6px] border border-[#e5e7eb] bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors"
+                  />
+                </div>
+
+                {/* Row 3: How Can We Help You* */}
+                <div>
+                  <label className="block text-[11.5px] font-bold  text-[#4b5563] mb-1.5">
+                    How Can We Help You*
+                  </label>
+                  <textarea
+                    rows={4}
+                    required
+                    placeholder="Tell us about your requirements..."
+                    value={formData.message}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
+                    className="w-full rounded-[6px] border border-[#e5e7eb] bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors resize-none"
+                  />
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="mt-2 flex w-full items-center justify-center gap-2 rounded-full bg-black py-3.5 text-center text-[12px] font-bold tracking-widest text-white uppercase hover:bg-neutral-800 transition-colors shadow-sm cursor-pointer disabled:opacity-75"
+                >
+                  <span>{loading ? "SENDING..." : "→ SEND MESSAGE"}</span>
+                </button>
+
+                {/* Success Feedback */}
+                {submitted && (
+                  <div className="rounded-[8px] bg-[#ecfdf5] border border-[#a7f3d0] p-3.5 text-center text-[12.5px] font-medium text-[#065f46]">
+                    Thank you! Your message has been sent successfully. Our consultants will
+                    contact you shortly.
+                  </div>
+                )}
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SECTION 4: FAQ'S ("Everything You Need to Know") Accordion
+          ========================================================================= */}
+      <section className="mx-auto max-w-[800px] px-6 py-6">
+        {/* Small label */}
+        <span className="block text-center text-[12px] font-bold tracking-widest text-[#6b7280] uppercase">
+          FAQ&apos;S
+        </span>
+
+        {/* Big Headline */}
+        <h2 className="mt-2 text-center text-[28px] font-bold tracking-tight text-[#0f0c3d] sm:text-[34px] lg:text-[38px]">
+          Everything You Need to Know
+        </h2>
+
+        {/* Accordion List */}
+        <div className="mt-10 space-y-4">
+          {FAQS.map((faq, index) => {
+            const isOpen = activeFaq === index;
+            return (
+              <div key={index} className="transition-all duration-200">
+                {isOpen ? (
+                  <div className="overflow-hidden rounded-[14px] shadow-sm">
+                    {/* Opened Header: Dark Navy */}
+                    <button
+                      type="button"
+                      onClick={() => toggleFaq(index)}
+                      className="flex w-full items-center justify-between bg-[#0d093b] p-5 text-left font-bold text-[15px] sm:text-[16px] text-white cursor-pointer"
+                    >
+                      <span>{faq.question}</span>
+                      <svg
+                        className="h-5 w-5 shrink-0 rotate-180 transition-transform text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+
+                    {/* Opened Content: Light Card */}
+                    <div className="border-x border-b border-[#e5e7eb] bg-white p-5 sm:p-6 text-[13.5px] leading-relaxed text-[#4b5563]">
+                      {faq.answer}
+                    </div>
+                  </div>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => toggleFaq(index)}
+                    className="flex w-full items-center justify-between border-b border-[#e5e7eb] py-5 text-left text-[15px] sm:text-[15.5px] font-semibold text-[#111827] hover:text-[#0d093b] transition-colors cursor-pointer"
+                  >
+                    <span>{faq.question}</span>
+                    <svg
+                      className="h-5 w-5 shrink-0 text-[#6b7280] transition-transform"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    </div>
   );
 }

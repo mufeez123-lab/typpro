@@ -19,38 +19,38 @@ interface BlogPost {
 const BLOG_POSTS: BlogPost[] = [
   {
     id: "post-1",
-    day: "05",
+    day: "12",
     month: "January",
-    author: "Paul B. Andrews",
-    commentsCount: 5,
-    title: "Flying Private is the New Standard of Comfort and Convenience",
+    author: "TYPPRO Advisory",
+    commentsCount: 3,
+    title: "Dubai Mainland vs Free Zone: Choosing the Right Jurisdiction in 2025",
     image:
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=900&q=85",
-    alt: "Passenger enjoying comfort and luxury in private jet",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85",
+    alt: "Dubai commercial business center and skyline",
     slug: "#",
   },
   {
     id: "post-2",
-    day: "08",
+    day: "18",
     month: "January",
-    author: "Paul B. Andrews",
-    commentsCount: 5,
-    title: "Inside a Private Jet What to Expect on Your First Flight",
+    author: "TYPPRO Advisory",
+    commentsCount: 7,
+    title: "How to Secure the 10-Year UAE Golden Visa: Requirements & Benefits",
     image:
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=900&q=85",
-    alt: "Private jet on airport tarmac with luxury traveler",
+      "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=900&q=85",
+    alt: "UAE residency visa and investment consulting",
     slug: "#",
   },
   {
     id: "post-3",
-    day: "16",
+    day: "24",
     month: "January",
-    author: "Paul B. Andrews",
-    commentsCount: 5,
-    title: "Behind the Scenes of Private Jet We Make Your Flight Seamless",
+    author: "TYPPRO Advisory",
+    commentsCount: 4,
+    title: "Corporate Tax & VAT in UAE: Essential Compliance Guide for Founders",
     image:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=85",
-    alt: "Executive working on laptop in private aircraft cabin",
+      "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=900&q=85",
+    alt: "Corporate accounting and tax compliance in Dubai",
     slug: "#",
   },
 ];
@@ -76,13 +76,12 @@ export default function BlogNews() {
 
               {/* Main Heading */}
               <h2 className="mt-4 text-[30px] font-semibold leading-[1.14] tracking-[-0.025em] text-[#141724] sm:text-[38px] ">
-                Blogs of Our Company
+                Insights &amp; Setup Guides
               </h2>
 
               {/* Subtitle Description */}
-              <p className="mt-5 max-w-[340px] text-[13px] font-normal leading-[1.72] text-[#646a80] sm:text-[10.5px]">
-                We provide expert advice to help you make informed decisions about chartering,
-                and premium in-flight experiences.
+              <p className="mt-5 max-w-[340px] text-[13px] font-normal leading-[1.72] text-[#646a80] sm:text-[13.5px]">
+                We provide expert analysis and step-by-step guides to help you make informed decisions about company setup, licensing, and residency in the UAE.
               </p>
 
               {/* View More Button */}
@@ -130,46 +129,10 @@ export default function BlogNews() {
                     </div> */}
                   </div>
 
-                  {/* Metadata Row: Author & Comments */}
-                  <div className="mt-4 flex items-center gap-4 text-[12px] font-medium text-[#717b96]">
-                    {/* Author */}
-                    <div className="inline-flex items-center gap-1.5">
-                      <svg
-                        className="h-3 w-3 text-[#e03a3e]"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                        <circle cx="12" cy="7" r="4" />
-                      </svg>
-                      <span className="transition-colors group-hover:text-[#141724]">
-                        {post.author}
-                      </span>
-                    </div>
-
-                    {/* Comments */}
-                    <div className="inline-flex items-center gap-1.5">
-                      <svg
-                        className="h-3 w-3 text-[#e03a3e]"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                      </svg>
-                      <span>{post.commentsCount} Comments</span>
-                    </div>
-                  </div>
+                 
 
                   {/* Blog Post Title */}
-                  <h3 className="mt-3 text-[12px] font-medium leading-snug tracking-[-0.015em] text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e] sm">
+                  <h3 className="mt-3 text-[14px] font-medium leading-snug tracking-[-0.015em] text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e] sm">
                     <Link href={post.slug}>{post.title}</Link>
                   </h3>
                 </div>
@@ -178,7 +141,7 @@ export default function BlogNews() {
                 <div className="pt-2">
                   <Link
                     href={post.slug}
-                    className="inline-flex items-center gap-1.5 text-[8px] font-semibold uppercase tracking-wider text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e]"
+                    className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#141724] transition-colors duration-200 group-hover:text-[#e03a3e]"
                   >
                     <span>READ MORE</span>
                     <span

@@ -39,7 +39,7 @@ const PROCESS_STEPS: ProcessStep[] = [
     number: "05",
     title: "Choose Office Space",
     description:
-      "Lease the right workspace for your business and complete the Ejari registration. Dubiz Business Setup business centers offer luxurious office space at prime locations.",
+      "Lease the right workspace for your business and complete the Ejari registration. TYPPRO business centers offer luxurious office space at prime locations.",
   },
   {
     number: "06",
@@ -62,16 +62,16 @@ const PROCESS_STEPS: ProcessStep[] = [
     number: "08",
     title: "Set Up Banking",
     description:
-      "Dubiz Business Setup has partnered with the best UAE banks. We will open your corporate bank account and get you operational faster.",
+      "TYPPRO has partnered with the best UAE banks. We will open your corporate bank account and get you operational faster.",
   },
 ];
 
 export default function CompanySetupProcess() {
-  const [activeTab, setActiveTab] = useState<"passenger" | "cargo">("passenger");
-  const [departure, setDeparture] = useState("USA");
-  const [destination, setDestination] = useState("Germany");
-  const [date, setDate] = useState("01 February 2025");
-  const [passengers, setPassengers] = useState("Pax");
+  const [activeTab, setActiveTab] = useState<"mainland" | "freezone">("mainland");
+  const [activity, setActivity] = useState("Commercial & Trading");
+  const [jurisdiction, setJurisdiction] = useState("Dubai Mainland (DET)");
+  const [visas, setVisas] = useState("1 Visa (Investor / Partner)");
+  const [office, setOffice] = useState("Virtual Office / Flexi Desk (Included)");
 
   return (
     <section className="relative w-full bg-[#d70000]">
@@ -86,11 +86,11 @@ export default function CompanySetupProcess() {
         <div className="relative w-full">
           {/* Banner Main Container */}
           <div className="relative min-h-[460px] sm:min-h-[480px] lg:min-h-[470px] w-full overflow-hidden rounded-[10px] ">
-            {/* Background Photography: Luxury Jet Cabin */}
+            {/* Background Photography: Dubai Skyline / Business Center */}
             <div className="pointer-events-none absolute inset-0 z-0 select-none">
               <Image
-                src="/images/contact-bg-1.jpg"
-                alt="Passenger enjoying luxury private jet flight"
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=80"
+                alt="Dubai modern commercial center and business district"
                 fill
                 priority
                 sizes="100vw"
@@ -122,11 +122,11 @@ export default function CompanySetupProcess() {
 
               {/* Banner Heading */}
               <h3 className="max-w-[460px] text-[32px] font-semibold leading-[1.15] tracking-[-0.02em] text-white sm:text-[40px] lg:text-[44px]">
-                Exclusive Travel
+                Business Setup
                 <br />
-                Awaits – Book a
+                in UAE – Calculate
                 <br />
-                Private Jet Now
+                Your Cost Now
               </h3>
 
               {/* Get Started Button */}
@@ -145,34 +145,40 @@ export default function CompanySetupProcess() {
           {/* Right Floating White Booking Widget (protruding past the bottom of the banner on desktop) */}
           <div className="mt-8 lg:mt-0 lg:absolute lg:right-8 lg:top-8 lg:w-[380px] lg:z-20">
             <div className="w-full rounded-[16px] bg-white p-6 sm:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.35)] text-[#141724]">
-              {/* Tabs: Passenger | Cargo */}
+              {/* Tabs: Mainland | Free Zone */}
               <div className="flex items-center border-b border-[#edf0f5]">
                 <button
                   type="button"
-                  onClick={() => setActiveTab("passenger")}
+                  onClick={() => {
+                    setActiveTab("mainland");
+                    setJurisdiction("Dubai Mainland (DET)");
+                  }}
                   className={`relative pb-3 text-[14px] font-semibold transition-colors duration-200 ${
-                    activeTab === "passenger"
+                    activeTab === "mainland"
                       ? "text-[#141724]"
                       : "text-[#8a91a5] hover:text-[#141724]"
                   }`}
                 >
-                  <span>Passenger</span>
-                  {activeTab === "passenger" && (
+                  <span>Mainland</span>
+                  {activeTab === "mainland" && (
                     <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#e03a3e]" />
                   )}
                 </button>
 
                 <button
                   type="button"
-                  onClick={() => setActiveTab("cargo")}
+                  onClick={() => {
+                    setActiveTab("freezone");
+                    setJurisdiction("IFZA Dubai Free Zone");
+                  }}
                   className={`ml-8 relative pb-3 text-[14px] font-semibold transition-colors duration-200 ${
-                    activeTab === "cargo"
+                    activeTab === "freezone"
                       ? "text-[#141724]"
                       : "text-[#8a91a5] hover:text-[#141724]"
                   }`}
                 >
-                  <span>Cargo</span>
-                  {activeTab === "cargo" && (
+                  <span>Free Zone</span>
+                  {activeTab === "freezone" && (
                     <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#e03a3e]" />
                   )}
                 </button>
@@ -180,20 +186,72 @@ export default function CompanySetupProcess() {
 
               {/* Form Fields Stack */}
               <div className="mt-5 space-y-3.5">
-                {/* Departure */}
+                {/* Business Activity */}
                 <div className="relative rounded-[8px] border border-[#e2e8f0] bg-white px-3.5 py-2 transition-colors focus-within:border-[#e03a3e]">
                   <label className="block text-[11px] font-medium text-[#717b96]">
-                    Departure
+                    Business Activity
                   </label>
                   <div className="flex items-center justify-between">
-                    <input
-                      type="text"
-                      value={departure}
-                      onChange={(e) => setDeparture(e.target.value)}
-                      className="w-full text-[13.5px] font-medium text-[#141724] focus:outline-none"
-                    />
+                    <select
+                      value={activity}
+                      onChange={(e) => setActivity(e.target.value)}
+                      className="w-full text-[13.5px] font-medium text-[#141724] bg-transparent focus:outline-none cursor-pointer appearance-none pr-3"
+                    >
+                      <option value="Commercial & Trading">Commercial &amp; Trading</option>
+                      <option value="Professional & Consultancy">Professional &amp; Consultancy</option>
+                      <option value="Industrial & Manufacturing">Industrial &amp; Manufacturing</option>
+                      <option value="E-Commerce & Digital Portal">E-Commerce &amp; Digital Portal</option>
+                      <option value="General Trading">General Trading</option>
+                      <option value="Tourism & Hospitality">Tourism &amp; Hospitality</option>
+                      <option value="Logistics & Transport">Logistics &amp; Transport</option>
+                    </select>
                     <svg
-                      className="h-4 w-4 shrink-0 text-[#8a91a5]"
+                      className="h-4 w-4 shrink-0 text-[#8a91a5] pointer-events-none"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Jurisdiction */}
+                <div className="relative rounded-[8px] border border-[#e2e8f0] bg-white px-3.5 py-2 transition-colors focus-within:border-[#e03a3e]">
+                  <label className="block text-[11px] font-medium text-[#717b96]">
+                    Jurisdiction
+                  </label>
+                  <div className="flex items-center justify-between">
+                    <select
+                      value={jurisdiction}
+                      onChange={(e) => setJurisdiction(e.target.value)}
+                      className="w-full text-[13.5px] font-medium text-[#141724] bg-transparent focus:outline-none cursor-pointer appearance-none pr-3"
+                    >
+                      {activeTab === "mainland" ? (
+                        <>
+                          <option value="Dubai Mainland (DET)">Dubai Mainland (DET)</option>
+                          <option value="Abu Dhabi Mainland (ADDED)">Abu Dhabi Mainland (ADDED)</option>
+                          <option value="Sharjah Mainland (SEDD)">Sharjah Mainland (SEDD)</option>
+                          <option value="Ajman Mainland">Ajman Mainland</option>
+                        </>
+                      ) : (
+                        <>
+                          <option value="IFZA Dubai Free Zone">IFZA Dubai Free Zone</option>
+                          <option value="Meydan Free Zone">Meydan Free Zone</option>
+                          <option value="DMCC Free Zone">DMCC Free Zone</option>
+                          <option value="Dubai South (DWC)">Dubai South (DWC)</option>
+                          <option value="SHAMS Sharjah Free Zone">SHAMS Sharjah Free Zone</option>
+                          <option value="RAKEZ (Ras Al Khaimah)">RAKEZ (Ras Al Khaimah)</option>
+                        </>
+                      )}
+                    </select>
+                    <svg
+                      className="h-4 w-4 shrink-0 text-[#8a91a5] pointer-events-none"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -213,20 +271,26 @@ export default function CompanySetupProcess() {
                   </div>
                 </div>
 
-                {/* Destination */}
+                {/* Visas Required */}
                 <div className="relative rounded-[8px] border border-[#e2e8f0] bg-white px-3.5 py-2 transition-colors focus-within:border-[#e03a3e]">
                   <label className="block text-[11px] font-medium text-[#717b96]">
-                    Destination
+                    Visas Required
                   </label>
                   <div className="flex items-center justify-between">
-                    <input
-                      type="text"
-                      value={destination}
-                      onChange={(e) => setDestination(e.target.value)}
-                      className="w-full text-[13.5px] font-medium text-[#141724] focus:outline-none"
-                    />
+                    <select
+                      value={visas}
+                      onChange={(e) => setVisas(e.target.value)}
+                      className="w-full text-[13.5px] font-medium text-[#141724] bg-transparent focus:outline-none cursor-pointer appearance-none pr-3"
+                    >
+                      <option value="0 Visas (License Only)">0 Visas (License Only)</option>
+                      <option value="1 Visa (Investor / Partner)">1 Visa (Investor / Partner)</option>
+                      <option value="2 Visas (Partner + Employee)">2 Visas (Partner + Employee)</option>
+                      <option value="3 Visas">3 Visas</option>
+                      <option value="4 Visas">4 Visas</option>
+                      <option value="5+ Visas (Corporate Quota)">5+ Visas (Corporate Quota)</option>
+                    </select>
                     <svg
-                      className="h-4 w-4 shrink-0 text-[#8a91a5]"
+                      className="h-4 w-4 shrink-0 text-[#8a91a5] pointer-events-none"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -235,58 +299,38 @@ export default function CompanySetupProcess() {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                       />
                     </svg>
                   </div>
                 </div>
 
-                {/* Date */}
+                {/* Office Space */}
                 <div className="relative rounded-[8px] border border-[#e2e8f0] bg-white px-3.5 py-2 transition-colors focus-within:border-[#e03a3e]">
                   <label className="block text-[11px] font-medium text-[#717b96]">
-                    Date
+                    Office Space
                   </label>
                   <div className="flex items-center justify-between">
-                    <input
-                      type="text"
-                      value={date}
-                      onChange={(e) => setDate(e.target.value)}
-                      className="w-full text-[13.5px] font-medium text-[#141724] focus:outline-none"
-                    />
-                    <svg
-                      className="h-4 w-4 shrink-0 text-[#8a91a5]"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
+                    <select
+                      value={office}
+                      onChange={(e) => setOffice(e.target.value)}
+                      className="w-full text-[13.5px] font-medium text-[#141724] bg-transparent focus:outline-none cursor-pointer appearance-none pr-3"
                     >
-                      <rect x="3" y="4" width="18" height="18" rx="2" />
-                      <line x1="16" y1="2" x2="16" y2="6" />
-                      <line x1="8" y1="2" x2="8" y2="6" />
-                      <line x1="3" y1="10" x2="21" y2="10" />
-                    </svg>
-                  </div>
-                </div>
-
-                {/* Passengers */}
-                <div className="relative rounded-[8px] border border-[#e2e8f0] bg-white px-3.5 py-2 transition-colors focus-within:border-[#e03a3e]">
-                  <label className="block text-[11px] font-medium text-[#717b96]">
-                    Passengers
-                  </label>
-                  <div className="flex items-center justify-between">
-                    <input
-                      type="text"
-                      value={passengers}
-                      onChange={(e) => setPassengers(e.target.value)}
-                      className="w-full text-[13.5px] font-medium text-[#141724] focus:outline-none"
-                    />
+                      <option value="Virtual Office / Flexi Desk (Included)">
+                        Virtual Office / Flexi Desk (Included)
+                      </option>
+                      <option value="Dedicated Coworking Desk">
+                        Dedicated Coworking Desk
+                      </option>
+                      <option value="Physical Commercial Office (Ejari)">
+                        Physical Commercial Office (Ejari)
+                      </option>
+                      <option value="Warehouse / Industrial Unit">
+                        Warehouse / Industrial Unit
+                      </option>
+                    </select>
                     <svg
-                      className="h-4 w-4 shrink-0 text-[#8a91a5]"
+                      className="h-4 w-4 shrink-0 text-[#8a91a5] pointer-events-none"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -298,14 +342,14 @@ export default function CompanySetupProcess() {
                 </div>
               </div>
 
-              {/* Search Button */}
-              <button
-                type="button"
-                className="mt-5 flex w-full items-center justify-center gap-1.5 rounded-[8px] bg-[#e03a3e] py-3.5 text-[13.5px] font-bold uppercase tracking-wider text-white shadow-[0_4px_14px_rgba(224,58,62,0.35)] transition-all duration-200 hover:bg-[#c62828] hover:shadow-[0_6px_18px_rgba(224,58,62,0.45)]"
+              {/* Calculate Button */}
+              <Link
+                href="#contact"
+                className="mt-5 flex w-full items-center justify-center gap-1.5 rounded-[6px] bg-[#e03a3e] py-3.5 text-[13.5px] font-bold uppercase tracking-wider text-white shadow-[0_4px_14px_rgba(224,58,62,0.35)] transition-all duration-200 hover:bg-[#c62828] hover:shadow-[0_6px_18px_rgba(224,58,62,0.45)]"
               >
-                <span>SEARCH NOW</span>
+                <span>CALCULATE NOW</span>
                 <span aria-hidden="true">&gt;</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -333,7 +377,7 @@ export default function CompanySetupProcess() {
             {PROCESS_STEPS.map((step) => (
               <div
                 key={step.number}
-                className="group flex flex-col justify-between rounded-[10px] border border-white/[0.07] bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-white/15  hover:shadow-xl sm:p-7"
+                className="group flex flex-col justify-between rounded-[10px] border border-white/[0.07] bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-white/15 hover:shadow-xl sm:p-7"
               >
                 <div>
                   {/* Card Top: Number (Orange-Red) + Diagonal Arrow (Top Right) */}
@@ -359,7 +403,7 @@ export default function CompanySetupProcess() {
                   </div>
 
                   {/* Card Title */}
-                  <h4 className="mt-4 text-[15.5px] font-semibold leading-snug tracking-[-0.015em]  transition-colors duration-200 text-[#d70000] sm:text-[16px]">
+                  <h4 className="mt-4 text-[15.5px] font-semibold leading-snug tracking-[-0.015em] transition-colors duration-200 text-[#d70000] sm:text-[16px]">
                     {step.title}
                   </h4>
 

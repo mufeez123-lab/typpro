@@ -19,60 +19,60 @@ export interface EmptyLegDeal {
 
 const DEALS: EmptyLegDeal[] = [
   {
-    id: "deal-1",
-    from: "London",
-    to: "Sydney",
+    id: "pkg-1",
+    from: "Dubai Mainland",
+    to: "Commercial License",
     image:
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
     description:
-      "Flying from New York to France on a private jet offers an unparalleled travel experience with luxury, comfort, and efficiency",
-    pax: 18,
-    date: "15 February 2025",
-    time: "11: 25am",
-    price: "$16,000",
-    aircraft: "Gulfstream G650",
+      "Complete Dubai mainland LLC formation with 100% foreign ownership, virtual office Ejari, DED approvals, and 1 investor visa included.",
+    pax: 1,
+    date: "Mainland LLC",
+    time: "24-48 Hours",
+    price: "From AED 12,500",
+    aircraft: "Commercial",
   },
   {
-    id: "deal-2",
-    from: "New York",
-    to: "Paris",
+    id: "pkg-2",
+    from: "UAE Free Zone",
+    to: "Starter Package",
     image:
-      "https://images.unsplash.com/photo-1519074069444-1ba4ea16e6f9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
     description:
-      "Experience transatlantic luxury at a fraction of standard charter rates with priority private FBO terminal boarding.",
-    pax: 14,
-    date: "18 February 2025",
-    time: "09: 45am",
-    price: "$18,500",
-    aircraft: "Bombardier Global 6000",
+      "Zero corporate tax under statutory threshold, 100% capital repatriation, flexible desk workspace, and fast-track registration.",
+    pax: 2,
+    date: "Free Zone FZE",
+    time: "3-5 Days",
+    price: "From AED 9,999",
+    aircraft: "Free Zone",
   },
   {
-    id: "deal-3",
-    from: "Dubai",
-    to: "Geneva",
+    id: "pkg-3",
+    from: "UAE Golden Visa",
+    to: "10-Year Residency",
     image:
-      "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=1200&q=80",
     description:
-      "Direct non-stop empty leg flight connecting the UAE with the Swiss Alps in complete comfort and privacy.",
+      "Long-term self-sponsored residency for real estate investors, entrepreneurs, and skilled executives with full family sponsorship.",
     pax: 10,
-    date: "22 February 2025",
-    time: "02: 15pm",
-    price: "$12,800",
-    aircraft: "Challenger 350",
+    date: "Self-Sponsored",
+    time: "5-7 Days",
+    price: "From AED 4,500",
+    aircraft: "Residency",
   },
   {
-    id: "deal-4",
-    from: "Nice",
-    to: "London",
+    id: "pkg-4",
+    from: "Corporate PRO",
+    to: "Annual Clearance",
     image:
-      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80",
     description:
-      "Quick Mediterranean European connection with zero commercial terminal congestion and bespoke gourmet catering.",
-    pax: 8,
-    date: "26 February 2025",
-    time: "04: 30pm",
-    price: "$7,900",
-    aircraft: "Phenom 300",
+      "Comprehensive government document clearing, MOHRE labour quotas, trade license renewal management, and banking coordination.",
+    pax: 1,
+    date: "Annual Retainer",
+    time: "24/7 Support",
+    price: "Custom Quote",
+    aircraft: "PRO Support",
   },
 ];
 
@@ -106,7 +106,7 @@ export default function EmptyLegs() {
   return (
     <section
       id="empty-legs"
-      className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-white py-20 "
     >
       <div className="relative z-10 mx-auto max-w-[1090px] px-6 sm:px-10 lg:px-14">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-14">
@@ -114,18 +114,15 @@ export default function EmptyLegs() {
           <div className="flex flex-col justify-between lg:col-span-6">
             <div>
               <h2 className="text-[34px] font-semibold leading-[1.14] tracking-[-0.025em] text-[#141724] sm:text-[42px] ">
-                Great Deals on
+                Popular Business
                 <br />
-                Empty Legs with
+                Setup Packages &amp;
                 <br />
-                JetSteals
+                Special Offers
               </h2>
 
-              <p className="mt-5 max-w-[480px] text-[11.8px] font-normal leading-[1.72] text-[#555a6d] ">
-                Looking for unbeatable private jet travel at a fraction of the
-                cost? JetSteals offers exclusive Great Deals on Empty Legs,
-                giving you access to luxury flights at significantly reduced
-                rates.
+              <p className="mt-5 max-w-[480px] text-[13px] font-normal leading-[1.72] text-[#555a6d] sm:text-[14px]">
+                Take advantage of our transparent, all-inclusive company formation and licensing packages tailored to your commercial goals in Dubai and across the UAE.
               </p>
             </div>
 
@@ -267,11 +264,11 @@ export default function EmptyLegs() {
           >
             {/* The Flight Deal Card */}
             <div className="overflow-hidden rounded-[6px] p-1 border border-[#e8ecf4] bg-white shadow-[0_12px_40px_rgba(15,23,42,0.08)] transition-all duration-300">
-              {/* Top Card Image: Private Jet Passenger */}
+              {/* Top Card Image: Setup Package Featured Image */}
               <div className="relative aspect-[19/10] w-full rounded-[6px]  overflow-hidden bg-[#eef1f6]">
                 <Image
                   src={currentDeal.image}
-                  alt={`${currentDeal.from} to ${currentDeal.to} private jet`}
+                  alt={`${currentDeal.from} - ${currentDeal.to} setup package`}
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover object-center transition-transform duration-700 ease-out hover:scale-105"
@@ -342,7 +339,7 @@ export default function EmptyLegs() {
                         d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                       />
                     </svg>
-                    <span>Pax: {currentDeal.pax}</span>
+                    <span>Visas: {currentDeal.pax}</span>
                   </div>
 
                   {/* Date */}
@@ -390,7 +387,7 @@ export default function EmptyLegs() {
                     href="#contact"
                     className="inline-flex items-center justify-center gap-1.5 rounded-[6px] bg-[#e03a3e] px-6 py-2.5 text-[12.5px] font-bold uppercase tracking-wider text-white shadow-[0_4px_14px_rgba(224,58,62,0.35)] transition-all duration-200 hover:bg-[#c62828] hover:shadow-[0_6px_18px_rgba(224,58,62,0.45)]"
                   >
-                    <span>BOOK NOW</span>
+                    <span>ENQUIRE NOW</span>
                     <span aria-hidden="true">&gt;</span>
                   </Link>
                 </div>

@@ -56,7 +56,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#0a0a0a] px-4 pb-8 pt-16 sm:px-6 sm:pt-20 lg:px-8 lg:pt-24">
+    <footer className="relative bg-[#d700000] px-4 pb-8 pt-16 sm:px-6 sm:pt-20 lg:px-8 lg:pt-24">
       <div className="mx-auto max-w-[1340px]">
         {/* Rounded White Card Container */}
         <div className="relative overflow-hidden rounded-[26px] bg-white px-7 py-12 shadow-[0_24px_60px_rgba(0,0,0,0.45)] sm:rounded-[32px] sm:px-11 sm:py-14 lg:px-14 lg:py-16">
@@ -78,17 +78,16 @@ export default function Footer() {
                 aria-label="TYPPRO Home"
               >
                 <Image
-                  src="/images/typpro-logo.png"
+                  src="/images/footer.png"
                   alt="TYPPRO Logo"
                   width={1024}
                   height={652}
-                  className="h-[44px] w-auto object-contain brightness-0"
+                  className="h-[70px] w-auto object-contain "
                 />
               </Link>
 
               <p className="mt-5 max-w-[265px] text-[13.5px] font-normal leading-[1.68] text-[#6b7280]">
-                We provide expert advice to help you make informed decisions
-                about business setup, visas, and wealth advisory experiences.
+                Premier UAE business setup, mainland &amp; free zone company formation, PRO document clearing, and Golden Visa advisory in Dubai.
               </p>
 
               {/* Newsletter */}
@@ -236,43 +235,7 @@ export default function Footer() {
             {/* Column 5: Vertical Store Pills + Contact & Working Hours */}
             <div className="flex flex-col items-start gap-7 sm:flex-row lg:col-span-4 lg:justify-end lg:gap-8">
               {/* Vertical App Store & Google Store Badges */}
-              <div className="flex flex-row gap-3 sm:flex-col">
-                <a
-                  href="#apple-store"
-                  className="flex items-center justify-center gap-2 rounded-[10px] bg-[#0b0f17] px-4 py-3 text-white transition-colors duration-200 hover:bg-[#1f2937] sm:h-[128px] sm:w-[44px] sm:flex-col sm:px-0 sm:py-4"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.78-.96 2.84 1.04.08 2.08-.52 2.72-1.3z" />
-                  </svg>
-                  <span className="whitespace-nowrap text-[12px] font-medium tracking-[0.02em] sm:[writing-mode:vertical-rl]">
-                    Apple Store
-                  </span>
-                </a>
-
-                <a
-                  href="#google-store"
-                  className="flex items-center justify-center gap-2 rounded-[10px] border border-[#f0f0f2] bg-white px-4 py-3 text-[#111111] shadow-[0_6px_20px_rgba(0,0,0,0.06)] transition-all duration-200 hover:border-[#d1d5db] hover:shadow-[0_8px_24px_rgba(0,0,0,0.09)] sm:h-[128px] sm:w-[44px] sm:flex-col sm:px-0 sm:py-4"
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M3.61 1.814L13.793 12 3.61 22.186a1.75 1.75 0 0 1-.61-1.335V3.15c0-.517.224-.995.61-1.335zm11.24 11.24l2.742 2.742-11.27 6.44 8.528-9.182zm3.743-3.743l2.297 1.312c.813.465.813 1.637 0 2.102l-2.297 1.312-2.685-2.685 2.685-2.041zM6.322 1.764l11.27 6.44-2.742 2.742-8.528-9.182z" />
-                  </svg>
-                  <span className="whitespace-nowrap text-[12px] font-medium tracking-[0.02em] sm:[writing-mode:vertical-rl]">
-                    Google Store
-                  </span>
-                </a>
-              </div>
+        
 
               {/* Contact & Working Hours */}
               <div className="min-w-[195px]">
@@ -283,7 +246,7 @@ export default function Footer() {
                 <ul className="mt-4 space-y-2.5 text-[13px] font-medium text-[#1f2937]">
                   <li>
                     <a
-                      href="mailto:support@typpro.ae"
+                      href="mailto:tpdclearing@gmail.com"
                       className="inline-flex items-center gap-2.5 transition-colors hover:text-[#c8102e]"
                     >
                       <svg
@@ -301,30 +264,7 @@ export default function Footer() {
                         <rect x="2" y="4" width="20" height="16" rx="2" />
                         <path d="m22 7-10 6L2 7" />
                       </svg>
-                      <span>support@typpro.ae</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="mailto:info@typpro.ae"
-                      className="inline-flex items-center gap-2.5 transition-colors hover:text-[#c8102e]"
-                    >
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="shrink-0 text-[#c8102e]"
-                        aria-hidden="true"
-                      >
-                        <rect x="2" y="4" width="20" height="16" rx="2" />
-                        <path d="m22 7-10 6L2 7" />
-                      </svg>
-                      <span>info@typpro.ae</span>
+                      <span>tpdclearing@gmail.com</span>
                     </a>
                   </li>
                   <li>
@@ -349,27 +289,25 @@ export default function Footer() {
                       <span>+971 56 820 4558</span>
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href="tel:+97143204558"
-                      className="inline-flex items-center gap-2.5 transition-colors hover:text-[#c8102e]"
+                  <li className="flex items-start gap-2.5">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="mt-0.5 shrink-0 text-[#c8102e]"
+                      aria-hidden="true"
                     >
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="shrink-0 text-[#c8102e]"
-                        aria-hidden="true"
-                      >
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                      </svg>
-                      <span>+971 4 320 4558</span>
-                    </a>
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span className="text-[12px] leading-snug text-[#4b5563]">
+                      Office 301–312, LEADER REAL ESTATE L.L.C, Al Souq Al Kabeer, Bur Dubai
+                    </span>
                   </li>
                 </ul>
 
@@ -423,11 +361,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright & Utility Bar */}
-        <div className="mt-7 flex flex-col items-center justify-between gap-4 px-2 text-[12.5px] text-white/75 sm:flex-row">
+        <div className="mt-7 flex flex-col items-center justify-between gap-4 px-2 text-[12.5px] text-white sm:flex-row">
           <p>
             © Copyright{" "}
-            <span className="font-medium text-[#d91e2a]">2026</span> by TYPPRO.
-            All rights reserved.
+            <span className="font-medium text-white">2026</span> by TYPPRO.
+            All rights reserved. Designed By <a href="https://growwiseagency.in/" className="font-bold text-[12.5px] text-white  transition-colors hover:text-white/60">GROWWISE AGENCY</a>.
           </p>
 
           <nav

@@ -2,9 +2,9 @@ import EmptyLegs from "@/components/EmptyLegs";
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "Great Deals on Empty Legs | JetSteals",
+  title: "Business Setup Packages & Special Offers | TYPPRO",
   description:
-    "Looking for unbeatable private jet travel at a fraction of the cost? JetSteals offers exclusive Great Deals on Empty Legs.",
+    "Explore cost-effective business setup packages, mainland licensing, free zone company registration, and Golden Visa offers in Dubai & UAE.",
 };
 
 export default function EmptyLegsPage() {

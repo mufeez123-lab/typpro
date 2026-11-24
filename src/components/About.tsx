@@ -139,7 +139,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-[#0a0a0a] py-18 text-white "
+      className="relative overflow-hidden bg-[#d70000] py-18 text-white "
     >
       <div className="mx-auto max-w-[1320px] px-6 sm:px-10 lg:px-14">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
@@ -148,34 +148,33 @@ export default function About() {
             <div className="mb-4 inline-flex items-center gap-2">
               <span
                 aria-hidden="true"
-                className="h-[5px] w-[5px] rounded-full bg-[#d91e2a]"
+                className="h-[5px] w-[5px] rounded-full bg-white"
               />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#d91e2a]">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white">
                 ABOUT US.
               </span>
             </div>
 
             <h2 className="text-[36px] font-semibold leading-[1.12] tracking-[-0.025em] text-white sm:text-[44px] lg:text-[50px]">
-              UAE Business &amp; Wealth,
+              Empowering Global
               <br />
-              Perfected Our
+              Entrepreneurs &amp;
               <br />
-              Mission and Legacy
+              Enterprises in UAE
             </h2>
 
-            <p className="mt-6 max-w-[520px] text-[14.5px] font-normal leading-[1.72] text-white/70 sm:text-[15px]">
-              Experience clarity and confidence like never before with TYPPRO,
-              your premier UAE business setup and wealth advisory partner.
-              Whether you&apos;re launching a company or expanding across the
-              region, we offer unparalleled expertise, privacy, and efficiency
-              to help you reach your goals with ease.
+            <p className="mt-6 max-w-[520px] text-[14.5px] font-normal leading-[1.72] text-white sm:text-[15px]">
+              Experience seamless company formation and total regulatory confidence with TYPPRO.
+              Based in Bur Dubai, we specialize in mainland company registration, Free Zone licensing,
+              offshore structuring, Golden Visas, and government document clearance. Our seasoned
+              PRO specialists guarantee swift, transparent approvals tailored to your goals.
             </p>
 
             {/* Dual CTA Buttons */}
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <Link
                 href="#contact"
-                className="group inline-flex h-[46px] items-center gap-2 rounded-[6px] bg-[#c8102e] px-6 text-[11.5px] font-semibold uppercase tracking-[0.08em] text-white transition-all duration-200 hover:bg-[#a60d26]"
+                className="group inline-flex h-[46px] items-center gap-2 rounded-[6px] bg-white px-6 text-[11.5px] font-semibold uppercase tracking-[0.08em] text-[#d70000] transition-all duration-200 "
               >
                 <span>LEARN MORE</span>
                 <svg

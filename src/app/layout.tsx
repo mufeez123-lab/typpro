@@ -10,9 +10,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "TYPPRO | Helping You Build and Protect Your Wealth",
+  title: "TYPPRO | UAE Business Setup, Licensing & PRO Services in Dubai",
   description:
-    "Award-winning financial planning rooted in trust, insight, and lasting relationships.",
+    "Leading company formation and document clearing specialists in the UAE. Mainland, Free Zone, Offshore setups, Golden Visas, and corporate tax compliance.",
 };
 
 export default function RootLayout({

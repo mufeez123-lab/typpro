@@ -13,7 +13,7 @@ const BUSINESS_SETUP_CARDS: SetupCard[] = [
   {
     title: "Mainland Company Formation",
     description:
-      "Defining vision, mission, and long-term growth strategies.",
+      "Establish your business across Dubai, Sharjah, Ajman, and Abu Dhabi Mainland with 100% foreign ownership and unrestricted UAE market access.",
     image: "/images/business-setup/setup-1.webp",
     href: "#contact",
     spanClass: "lg:col-span-7",
@@ -21,7 +21,7 @@ const BUSINESS_SETUP_CARDS: SetupCard[] = [
   {
     title: "Free Zone Business Setup",
     description:
-      "Tax-efficient jurisdictions, rapid company registration",
+      "Tax-efficient jurisdictions, rapid company registration, 100% capital repatriation, and flexible licensing options.",
     image: "/images/business-setup/setup-2.webp",
     href: "#contact",
     spanClass: "lg:col-span-5",
@@ -29,7 +29,7 @@ const BUSINESS_SETUP_CARDS: SetupCard[] = [
   {
     title: "Offshore Company Setup",
     description:
-      "Asset protection, international trade structuring",
+      "Secure asset protection, confidential international business structures, and seamless global trading facilitation.",
     image: "/images/business-setup/setup-3.webp",
     href: "#contact",
     spanClass: "lg:col-span-5",
@@ -37,7 +37,7 @@ const BUSINESS_SETUP_CARDS: SetupCard[] = [
   {
     title: "PRO & Corporate Licensing",
     description:
-      "End-to-end visa processing, Emirates ID",
+      "End-to-end visa & immigration processing, Emirates ID, MOHRE clearance, license amendments, and document clearing.",
     image: "/images/business-setup/setup-4.webp",
     href: "#contact",
     spanClass: "lg:col-span-7",
@@ -74,7 +74,7 @@ export default function BusinessSetup() {
           <div className="shrink-0">
             <Link
               href="#services"
-              className="inline-flex h-[42px] items-center justify-center rounded-[8px] bg-[#9e1422] px-6 text-[14px] font-medium text-white shadow-[0_8px_22px_rgba(158,20,34,0.22)] transition-all duration-200 hover:bg-[#820f1b] hover:shadow-[0_12px_28px_rgba(158,20,34,0.3)]"
+              className="inline-flex h-[42px] items-center justify-center rounded-[6px] bg-[#9e1422] px-6 text-[14px] font-medium text-white shadow-[0_8px_22px_rgba(158,20,34,0.22)] transition-all duration-200 hover:bg-[#820f1b] hover:shadow-[0_12px_28px_rgba(158,20,34,0.3)]"
             >
               More Services
             </Link>
@@ -115,7 +115,10 @@ export default function BusinessSetup() {
                   {card.title}
                 </h3>
 
-                <p className="mt-2.5 max-w-[460px] text-[14px] font-normal leading-[1.6] text-white/80 sm:text-[15px]">
+                <p
+                  title={card.description}
+                  className="mt-2.5 max-w-full truncate text-[14px] font-normal leading-[1.6] text-white/80 sm:text-[15px]"
+                >
                   {card.description}
                 </p>
 

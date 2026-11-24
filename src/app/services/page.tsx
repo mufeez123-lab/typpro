@@ -2,9 +2,9 @@ import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
 
 export const metadata = {
-  title: "Services | TYPPRO",
+  title: "Business Setup & Corporate Services | TYPPRO",
   description:
-    "Explore our full suite of aviation, business setup, and charter services in the UAE.",
+    "Explore our full suite of PRO services, business licensing, tax accounting, and company formation in the UAE.",
 };
 
 export default function ServicesPage() {

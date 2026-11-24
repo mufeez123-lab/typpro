@@ -14,57 +14,57 @@ export interface ServiceCard {
 
 const SERVICES: ServiceCard[] = [
   {
-    id: "charter-services",
-    title: "Charter Services",
+    id: "pro-visa-services",
+    title: "PRO & Visa Services",
     description:
-      "Charter Services provide unparalleled flexibility, comfort, and convenience.",
+      "End-to-end visa and immigration clearance, Emirates ID processing, and MOHRE labour approvals for investors, employees, and families.",
     image:
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=80",
     href: "#contact",
   },
   {
-    id: "cargo-specialty-flights",
-    title: "Cargo & Specialty Flights",
+    id: "business-licensing",
+    title: "Business Licensing",
     description:
-      "Secure transport of high-value goods, artwork, and sensitive cargo.",
+      "Commercial, industrial, and professional trade license applications, renewals, activity additions, and statutory amendments.",
     image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=900&q=80",
     href: "#contact",
   },
   {
-    id: "aviation-consultancy",
-    title: "Aviation Consultancy",
+    id: "tax-accounting",
+    title: "Tax & Accounting",
     description:
-      "We provide specialized aviation consultancy services designed to help individuals.",
+      "Expert corporate tax filing, VAT registration, bookkeeping, and advisory ensuring full compliance with UAE FTA regulations.",
     image:
-      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=900&q=80",
     href: "#contact",
   },
   {
-    id: "aircraft-sourcing-sales",
-    title: "Aircraft Sourcing & Sales",
+    id: "corporate-services",
+    title: "Corporate Services & Clearing",
     description:
-      "We specialize in aircraft sourcing and sales, ensuring our clients secure.",
+      "Swift government document clearing, corporate legal documentation, ministry transaction approvals, and business center support.",
     image:
-      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
     href: "#contact",
   },
   {
-    id: "vip-airport-handling",
-    title: "VIP Airport Handling",
+    id: "free-zone-setup",
+    title: "Free Zone Company Formation",
     description:
-      "Seamless tarmac transfers, private terminal lounges, and priority customs clearance.",
+      "Tax-efficient incorporation in top UAE Free Zones with 100% foreign ownership, flexible desk options, and zero currency restrictions.",
     image:
-      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80",
     href: "#contact",
   },
   {
-    id: "maintenance-fleet-support",
-    title: "Maintenance & Fleet Support",
+    id: "golden-visa",
+    title: "UAE Golden Visa Solutions",
     description:
-      "Comprehensive aircraft maintenance oversight, airworthiness compliance, and hangar services.",
+      "10-year self-sponsored residency for real estate investors, business owners, professionals, and their family members.",
     image:
-      "https://images.unsplash.com/photo-1520437358207-323b43b50729?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=900&q=80",
     href: "#contact",
   },
 ];
@@ -140,7 +140,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-[#f3f4f8] py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-[#f3f4f8] py-20 sm:py-20"
     >
       <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-14">
         {/* Top Header Row */}
@@ -148,7 +148,7 @@ export default function Services() {
           {/* Left Heading */}
           <div className="">
             <h2 className="text-[28px] font-semibold leading-[1.22] tracking-[-0.025em] text-[#191c28] sm:text-[34px] md:text-[38px] lg:text-[32px]">
-              Why Choose Dubiz Business Setup
+              Why Choose TYPPRO
               <br />
               for Business Setup in the UAE?
             </h2>

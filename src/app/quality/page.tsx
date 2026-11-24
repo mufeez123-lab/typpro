@@ -2,9 +2,9 @@ import Navbar from "@/components/Navbar";
 import Quality from "@/components/Quality";
 
 export const metadata = {
-  title: "Easy Way to Book Private Jet | TYPPRO",
+  title: "3 Simple Steps to Launch Your UAE Business | TYPPRO",
   description:
-    "Booking a private jet has become easier and more accessible than ever, thanks to advancements in technology and the rise of on-demand.",
+    "Discover how easy it is to register your company, get your trade license, and obtain residency visas in the UAE with TYPPRO.",
 };
 
 export default function QualityPage() {
