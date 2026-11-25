@@ -205,12 +205,12 @@ export default function Contact({ extraClassName = "" }: ContactProps) {
 
       {/* =========================================================================
           SECTION 3: Interactive Google Map + SEND A MESSAGE Form Box
-          ========================================================================= */}
-      <section id="form" className="mx-auto max-w-[1140px] px-6 py-14 sm:px-10  lg:px-12 ">
-        <div className="rounded-[20px] bg-[#f8fafc] border border-[#edf2f7] p-3 shadow-sm">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 items-stretch">
+          ========================================================================= */}       
+      <section id="form" className="mx-auto  px-6 py-14 sm:px-10  lg:px-6 ">
+        <div className="rounded-[10px] bg-[#f8fafc] border border-[#edf2f7] p-3 shadow-sm">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-24 items-stretch">
             {/* Left Column: Interactive Map */}
-            <div className="relative min-h-[420px] w-full rounded-[16px] overflow-hidden border border-[#e2e8f0] shadow-sm">
+            <div className="relative min-h-[420px] w-full rounded-[10px] overflow-hidden border border-[#e2e8f0] shadow-sm">
               <iframe
                 title="Office Location Map"
                 src="https://maps.google.com/maps?q=Al%20Souq%20Al%20Kabeer%2C%20Bur%20Dubai%2C%20Dubai&t=&z=14&ie=UTF8&iwloc=&output=embed"
@@ -225,7 +225,7 @@ export default function Contact({ extraClassName = "" }: ContactProps) {
 
             {/* Right Column: SEND A MESSAGE Form */}
             <div className="flex flex-col justify-center py-18" >
-              <h3 className="text-[16px] font-bold tracking-wider text-[#111827] uppercase">
+              <h3 className="text-[24px] font-bold  text-[#111827] uppercase">
                 SEND A MESSAGE
               </h3>
 
@@ -233,68 +233,68 @@ export default function Contact({ extraClassName = "" }: ContactProps) {
                 {/* Row 1: Full name & Email address */}
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
-                    <label className="block text-[11.5px] font-bold text-[#4b5563] mb-1.5">
+                    <label className="block text-[14px] font-bold text-black mb-1.5">
                       Full name*
                     </label>
                     <input
                       type="text"
                       required
-                      placeholder="Your name"
+                      // placeholder="Your name"
                       value={formData.fullName}
                       onChange={(e) =>
                         setFormData({ ...formData, fullName: e.target.value })
                       }
-                      className="w-full rounded-[6px] border border-[#e5e7eb] bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors"
+                      className="w-full rounded-[6px]  bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[11.5px] font-bold text-[#4b5563] mb-1.5">
+                    <label className="block text-[14px] font-bold text-black mb-1.5">
                       Email address*
                     </label>
                     <input
                       type="email"
                       required
-                      placeholder="Your email"
+                      // placeholder="Your email"
                       value={formData.email}
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      className="w-full rounded-[6px] border border-[#e5e7eb] bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors"
+                      className="w-full rounded-[6px]  bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors"
                     />
                   </div>
                 </div>
 
                 {/* Row 2: Subject */}
                 <div>
-                  <label className="block text-[11.5px] font-bold  text-[#4b5563] mb-1.5">
+                  <label className="block text-[14px] font-bold  text-black mb-1.5">
                     Subject
                   </label>
                   <input
                     type="text"
-                    placeholder="Topic or inquiry"
+                    // placeholder="Topic or inquiry"
                     value={formData.subject}
                     onChange={(e) =>
                       setFormData({ ...formData, subject: e.target.value })
                     }
-                    className="w-full rounded-[6px] border border-[#e5e7eb] bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors"
+                    className="w-full rounded-[6px]  bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors"
                   />
                 </div>
 
                 {/* Row 3: How Can We Help You* */}
                 <div>
-                  <label className="block text-[11.5px] font-bold  text-[#4b5563] mb-1.5">
+                  <label className="block text-[14px] font-bold  text-black mb-1.5">
                     How Can We Help You*
                   </label>
                   <textarea
                     rows={4}
                     required
-                    placeholder="Tell us about your requirements..."
+                    // placeholder="Tell us about your requirements..."
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    className="w-full rounded-[6px] border border-[#e5e7eb] bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors resize-none"
+                    className="w-full rounded-[6px]   bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors resize-none"
                   />
                 </div>
 
@@ -330,7 +330,7 @@ export default function Contact({ extraClassName = "" }: ContactProps) {
         </span>
 
         {/* Big Headline */}
-        <h2 className="mt-2 text-center text-[28px] font-bold tracking-tight text-[#0f0c3d] sm:text-[34px] lg:text-[38px]">
+        <h2 className="mt-2 text-center text-[28px] font-medium tracking-tight text-[#0f0c3d] sm:text-[34px] lg:text-[38px]">
           Everything You Need to Know
         </h2>
 
@@ -339,50 +339,54 @@ export default function Contact({ extraClassName = "" }: ContactProps) {
           {FAQS.map((faq, index) => {
             const isOpen = activeFaq === index;
             return (
-              <div key={index} className="transition-all duration-200">
-                {isOpen ? (
-                  <div className="overflow-hidden rounded-[14px] shadow-sm">
-                    {/* Opened Header: Dark Navy */}
-                    <button
-                      type="button"
-                      onClick={() => toggleFaq(index)}
-                      className="flex w-full items-center justify-between bg-[#0d093b] p-5 text-left font-bold text-[15px] sm:text-[16px] text-white cursor-pointer"
-                    >
-                      <span>{faq.question}</span>
-                      <svg
-                        className="h-5 w-5 shrink-0 rotate-180 transition-transform text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
+              <div
+                key={index}
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  isOpen
+                    ? "rounded-[14px] shadow-sm border border-transparent"
+                    : "border-b border-[#e5e7eb]"
+                }`}
+              >
+                {/* Header Button */}
+                <button
+                  type="button"
+                  onClick={() => toggleFaq(index)}
+                  className={`flex w-full items-center justify-between text-left cursor-pointer transition-all duration-300 ease-in-out ${
+                    isOpen
+                      ? "bg-[#d70000] p-5 font-semibold text-[15px] sm:text-[16px] text-white rounded-t-[14px]"
+                      : "bg-transparent p-5 font-semibold text-[15px] sm:text-[16px] text-[#111827] rounded-t-[14px] hover:text-[#0d093b]"
+                  }`}
+                >
+                  <span>{faq.question}</span>
+                  <svg
+                    className={`h-5 w-5 shrink-0 transition-transform duration-300 ease-in-out ${
+                      isOpen ? "rotate-180 text-white" : "rotate-0 text-[#6b7280]"
+                    }`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={isOpen ? "2.5" : "2"}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
 
-                    {/* Opened Content: Light Card */}
-                    <div className="border-x border-b border-[#e5e7eb] bg-white p-5 sm:p-6 text-[13.5px] leading-relaxed text-[#4b5563]">
+                {/* Animated Dropdown Content */}
+                <div
+                  className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  }`}
+                  style={{
+                    gridTemplateRows: isOpen ? "1fr" : "0fr",
+                    opacity: isOpen ? 1 : 0,
+                  }}
+                >
+                  <div className="overflow-hidden">
+                    <div className="border-x border-b border-[#e5e7eb] bg-white p-5 sm:p-6 text-[13.5px] leading-relaxed text-[#4b5563] rounded-b-[14px]">
                       {faq.answer}
                     </div>
                   </div>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => toggleFaq(index)}
-                    className="flex w-full items-center justify-between border-b border-[#e5e7eb] py-5 text-left text-[15px] sm:text-[15.5px] font-semibold text-[#111827] hover:text-[#0d093b] transition-colors cursor-pointer"
-                  >
-                    <span>{faq.question}</span>
-                    <svg
-                      className="h-5 w-5 shrink-0 text-[#6b7280] transition-transform"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                )}
+                </div>
               </div>
             );
           })}
