@@ -41,7 +41,7 @@ const NAV_ITEMS: NavLinkItem[] = [
   { label: "Contact Us", href: "/contact", type: "link" },
 ];
 
-function TypproLogo({ isSticky }: { isSticky?: boolean }) {
+function TypproLogo() {
   return (
     <Link
       href="/"
@@ -54,9 +54,7 @@ function TypproLogo({ isSticky }: { isSticky?: boolean }) {
         width={1024}
         height={652}
         priority
-        className={`w-auto object-contain transition-all duration-300 group-hover:opacity-90 ${
-          isSticky ? "h-[40px] sm:h-[52px]" : "h-[46px] sm:h-[62px]"
-        }`}
+        className="h-[46px] sm:h-[62px] w-auto object-contain transition-opacity duration-300 group-hover:opacity-90"
       />
     </Link>
   );
@@ -142,14 +140,10 @@ export default function Navbar() {
           : "absolute inset-x-0 top-0 z-40 bg-transparent border-b border-white/25"
       }
     >
-      <div
-        className={`relative mx-auto flex max-w-[1440px] items-center justify-between px-6 sm:px-10 lg:px-14 ${
-          isSticky ? "h-[74px] sm:h-[78px]" : "h-[86px]"
-        }`}
-      >
+      <div className="relative mx-auto flex h-[86px] max-w-[1440px] items-center justify-between px-6 sm:px-10 lg:px-14">
         {/* Left: Brand Logo */}
         <div className="flex items-center">
-          <TypproLogo isSticky={isSticky} />
+          <TypproLogo />
         </div>
 
         {/* Center: Primary Navigation with Mega Menu & Dropdown */}
@@ -178,9 +172,7 @@ export default function Navbar() {
                     setActiveLink(item.label);
                     setHoveredMenu(null);
                   }}
-                  className={`group relative flex items-center gap-1.5 text-[13px] font-medium tracking-[0.01em] ${
-                    isSticky ? "h-[74px] sm:h-[78px]" : "h-[86px]"
-                  } ${
+                  className={`group relative flex h-[86px] items-center gap-1.5 text-[13px] font-medium tracking-[0.01em] ${
                     isHovered || isActive ? "text-white" : "text-white/95 hover:text-white"
                   }`}
                 >
@@ -225,9 +217,7 @@ export default function Navbar() {
                   <div
                     onMouseEnter={() => handleMouseEnter(item.label)}
                     onMouseLeave={handleMouseLeave}
-                    className={`absolute left-1/2 z-50 w-72 -translate-x-1/2 pt-2 animate-in fade-in slide-in-from-top-2 duration-150 transition-all duration-300 ${
-                      isSticky ? "top-[70px]" : "top-[82px]"
-                    }`}
+                    className="absolute left-1/2 top-[82px] z-50 w-72 -translate-x-1/2 pt-2 animate-in fade-in slide-in-from-top-2 duration-150 transition-all duration-300"
                   >
                     {/* Hover Bridge */}
                     <div className="absolute -top-3 left-0 right-0 h-3" />
@@ -351,9 +341,7 @@ export default function Navbar() {
             if (hoveredMenu) handleMouseEnter(hoveredMenu);
           }}
           onMouseLeave={handleMouseLeave}
-          className={`absolute left-1/2 z-50 w-[calc(100vw-3rem)] max-w-[1360px] -translate-x-1/2 pt-2 transition-all duration-300 ${
-            isSticky ? "top-[68px]" : "top-[78px]"
-          }`}
+          className="absolute left-1/2 top-[82px] z-50 w-[calc(100vw-3rem)] max-w-[1360px] -translate-x-1/2 pt-2 transition-all duration-300"
         >
           {/* Hover Bridge to keep cursor connected between header and menu */}
           <div className="absolute -top-3 left-0 right-0 h-3" />
