@@ -270,7 +270,7 @@ const BangladeshFlag = () => (
 const ROW_1_COUNTRIES: CountryItem[] = [
   { name: "India", flag: <IndiaFlag /> },
   { name: "Bangladesh", flag: <BangladeshFlag /> },
-  { name: "Saudi Arabia", flag: <SaudiArabiaFlag /> },
+  { name: "KSA", flag: <SaudiArabiaFlag /> },
   { name: "Afghanistan", flag: <AfghanistanFlag /> },
   { name: "Brazil", flag: <BrazilFlag /> },
   { name: "Australia", flag: <AustraliaFlag /> },
@@ -288,7 +288,7 @@ const ROW_1_COUNTRIES: CountryItem[] = [
 // Marquee Row 2 Items (Moving to the RIGHT)
 const ROW_2_COUNTRIES: CountryItem[] = [
   { name: "Bangladesh", flag: <BangladeshFlag /> },
-  { name: "Saudi Arabia", flag: <SaudiArabiaFlag /> },
+  { name: "KSA", flag: <SaudiArabiaFlag /> },
   { name: "India", flag: <IndiaFlag /> },
   { name: "Brazil", flag: <BrazilFlag /> },
   { name: "Bulgaria", flag: <BulgariaFlag /> },
