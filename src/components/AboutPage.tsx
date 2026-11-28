@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import WhyChooseUs from "./WhyChooseUs";
+import Stack from "./Stack";
+import BusinessSetup from "./BusinessSetup";
 
 export interface AboutProps {
   extraClassName?: string;
@@ -11,6 +14,9 @@ interface FaqItem {
   question: string;
   answer: string;
 }
+
+
+
 
 const FAQS: FaqItem[] = [
   {
@@ -65,11 +71,17 @@ export default function About({ extraClassName = "" }: AboutProps) {
       {/* =========================================================================
           SECTION 1: Top Hero Header
           ========================================================================= */}
-      <section className=" px-6 pt-10 pb-12 sm:px-22 sm:pt-14 sm:pb-16 h-[55vh]  bg-[#d70000] -mt-[120px]">
+      <section className=" px-6 pt-10 pb-12 sm:px-22 sm:pt-14  h-[58vh]  bg-[#d70000] -mt-[120px]">
         {/* Small uppercase tag with diagonal arrow */}
-        <Link
+      
+
+        {/* 2-Column Header Grid */}
+        <div className="mt-38 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-12 lg:items-start">
+          {/* Main Large Headline */}
+          <div className="lg:col-span-6 ">
+              <Link
           href="#form"
-          className="inline-flex items-center mt-16 group absolute gap-1.5 text-[12px] font-bold tracking-wider text-white uppercase hover:opacity-80 transition-opacity"
+          className="inline-flex items-center mt-[-24px] group absolute gap-1.5 text-[12px] font-bold tracking-wider text-white uppercase hover:opacity-80 transition-opacity"
         >
           <span>ABOUT US</span>
           <svg
@@ -82,19 +94,14 @@ export default function About({ extraClassName = "" }: AboutProps) {
             <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H9M17 7V15" />
           </svg>
         </Link>
-
-        {/* 2-Column Header Grid */}
-        <div className="mt-23 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-12 lg:items-start">
-          {/* Main Large Headline */}
-          <div className="lg:col-span-6">
-            <h1 className="text-[32px] font-bold leading-[1.18] tracking-[-0.03em] text-white sm:text-[40px] lg:text-[46px]">
+            <h1 className="text-[32px] font-bold leading-[1.18] tracking-[-0.03em] text-white sm:text-[38px] ">
               We are a creative digital agency shaping meaningful experiences
             </h1>
           </div>
 
           {/* Right Explanatory Paragraph */}
           <div className="lg:col-span-5 lg:pt-2 items-center">
-            <p className="text-[13.5px] font-normal leading-[1.7] text-white sm:text-[14.5px] mt-10">
+            <p className="text-[13.5px] font-normal leading-[1.7] text-white sm:text-[14.5px] mt-5">
               We blend strategy, creativity, and technology to help brands grow, connect, and
               stand out in an ever-evolving digital world.
             </p>
@@ -103,223 +110,326 @@ export default function About({ extraClassName = "" }: AboutProps) {
       </section>
 
       {/* =========================================================================
-          SECTION 2: 3 Floating Info Cards on Soft Gray Band
+          SECTION 2: Automatically moving horizontal image gallery
           ========================================================================= */}
-      <section className="w-full bg-[#f0f4f6] py-10 sm:py-12">
-        <div className="mx-auto max-w-[1180px] px-6 sm:px-10 lg:px-12">
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-            {/* Card 1: Call Us */}
-            <div className="flex items-center gap-4 rounded-[16px] bg-white p-3 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-[#eef2f6]">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gray-100 text-[#d70000]">
-                <svg
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+      <section
+        aria-label="Our team and creative process"
+        className="w-full overflow-hidden  py-0"
+      >
+        <div className="flex  w-full items-center overflow-hidden sm:h-[82vh]">
+          <div className="gallery-auto-track flex w-max">
+            {[0, 1].map((copy) => (
+              <div
+                key={copy}
+                className="flex shrink-0 items-center gap-4 pr-4 sm:gap-5 sm:pr-5 lg:gap-6 lg:pr-6"
+                aria-hidden={copy === 1}
+              >
+                <figure className="relative h-[48vh] w-[82vw] shrink-0 overflow-hidden rounded-[12px] sm:h-[68vh] sm:w-[58vw] lg:w-[39vw]">
+                  <img
+                    src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1500&q=85"
+                    alt={copy === 0 ? "Creative team collaborating around a table" : ""}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
                   />
-                </svg>
-              </div>
-              <div>
-                <span className="block text-[11.5px] font-medium text-[#6b7280]">
-                  Call Us 7/24
-                </span>
-                <a
-                  href="tel:+971568204558"
-                  className="text-[14.5px] font-bold text-[#111827] hover:text-[#0d9488] transition-colors"
-                >
-                  +971 56 820 4558
-                </a>
-              </div>
-            </div>
+                </figure>
 
-            {/* Card 2: Location */}
-            <div className="flex items-center gap-4 rounded-[16px] bg-white p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-[#eef2f6]">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gray-100 text-[#d70000]">
-                <svg
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                <figure className="relative h-[48vh] w-[82vw] shrink-0 overflow-hidden rounded-[12px] sm:h-[68vh] sm:w-[58vw] lg:w-[39vw]">
+                  <img
+                    src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1500&q=85"
+                    alt={copy === 0 ? "Modern creative studio workspace" : ""}
+                    className="h-full w-full object-cover grayscale"
+                    loading="lazy"
                   />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-              </div>
-              <div>
-                <span className="block text-[11.5px] font-medium text-[#6b7280]">
-                  Location
-                </span>
-                <span className="text-[13px] font-bold text-[#111827] leading-snug">
-                  Office 301–312, LEADER REAL ESTATE L.L.C, Al Souq Al Kabeer, Bur Dubai
-                </span>
-              </div>
-            </div>
+                </figure>
 
-            {/* Card 3: Make a Quote */}
-            <div className="flex items-center gap-4 rounded-[16px] bg-white p-5 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-[#eef2f6]">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gray-100 text-[#d70000]">
-                <svg
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                <figure className="relative h-[48vh] w-[82vw] shrink-0 overflow-hidden rounded-[12px] sm:h-[68vh] sm:w-[58vw] lg:w-[39vw]">
+                  <img
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1500&q=85"
+                    alt={copy === 0 ? "Team sharing ideas in a creative meeting" : ""}
+                    className="h-full w-full object-cover grayscale"
+                    loading="lazy"
                   />
-                </svg>
+                </figure>
+
+                <figure className="relative h-[48vh] w-[82vw] shrink-0 overflow-hidden rounded-[12px] sm:h-[68vh] sm:w-[58vw] lg:w-[39vw]">
+                  <img
+                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1500&q=85"
+                    alt={copy === 0 ? "Colleagues working together on a project" : ""}
+                    className="h-full w-full object-cover grayscale"
+                    loading="lazy"
+                  />
+                </figure>
               </div>
-              <div>
-                <span className="block text-[11.5px] font-medium text-[#6b7280]">
-                  Make a Quote
-                </span>
-                <a
-                  href="mailto:tpdclearing@gmail.com"
-                  className="text-[14.5px] font-bold text-[#111827] hover:text-[#0d9488] transition-colors"
-                >
-                  tpdclearing@gmail.com
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
+
+        <style jsx>{`
+          .gallery-auto-track {
+            animation: gallery-auto-scroll 38s linear infinite;
+            will-change: transform;
+          }
+
+          .gallery-auto-track:hover {
+            animation-play-state: paused;
+          }
+
+          @keyframes gallery-auto-scroll {
+            from {
+              transform: translate3d(0, 0, 0);
+            }
+            to {
+              transform: translate3d(-50%, 0, 0);
+            }
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            .gallery-auto-track {
+              animation: none;
+            }
+          }
+        `}</style>
       </section>
 
       {/* =========================================================================
           SECTION 3: Interactive Google Map + SEND A MESSAGE Form Box
           ========================================================================= */}       
-      <section id="form" className="mx-auto  px-6 py-14 sm:px-10  lg:px-6 ">
-        <div className="rounded-[10px] bg-[#f8fafc] border border-[#edf2f7] p-3 shadow-sm">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-24 items-stretch">
-            {/* Left Column: Interactive Map */}
-            <div className="relative min-h-[420px] w-full rounded-[10px] overflow-hidden border border-[#e2e8f0] shadow-sm">
-              <iframe
-                title="Office Location Map"
-                src="https://maps.google.com/maps?q=Al%20Souq%20Al%20Kabeer%2C%20Bur%20Dubai%2C%20Dubai&t=&z=14&ie=UTF8&iwloc=&output=embed"
-                className="h-full w-full min-h-[420px] border-0"
-                loading="lazy"
-                allowFullScreen
-              />
 
-              {/* Map Floating Badge */}
-            
-            </div>
+      {/* =========================================================================
+          SECTION 3: Our Strength - Government Departments
+          ========================================================================= */}
 
-            {/* Right Column: SEND A MESSAGE Form */}
-            <div className="flex flex-col justify-center py-18" >
-              <h3 className="text-[24px] font-bold  text-[#111827] uppercase">
-                SEND A MESSAGE
-              </h3>
+      {/* =========================================================================
+          SECTION 3: Our Strength - Government Departments Auto Marquee
+          ========================================================================= */}
+<section
+        id="form"
+        className="w-full overflow-hidden bg-white px-6 py-7 pb-10 sm:px-10  lg:px-12"
+      >
+        <div className="mx-auto max-w-[1500px]">
 
-              <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-                {/* Row 1: Full name & Email address */}
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <div>
-                    <label className="block text-[14px] font-bold text-black mb-1.5">
-                      Full name*
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      // placeholder="Your name"
-                      value={formData.fullName}
-                      onChange={(e) =>
-                        setFormData({ ...formData, fullName: e.target.value })
-                      }
-                      className="w-full rounded-[6px]  bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors"
-                    />
+          {/* Section Heading */}
+          <div className="text-center">
+          
+
+            <h2 className="mx-auto mt-3 max-w-[1250px] text-[25px] font-semibold leading-tight tracking-[-0.02em] text-[#111111] sm">
+              Trusted PRO Services Partner Across All Dubai &amp; UAE Government Departments
+            </h2>
+          </div>
+
+          {/* Auto Scrolling Logos */}
+          <div className="relative mt-14 w-full overflow-hidden lg:mt-20">
+
+            <div className="logo-marquee flex w-max items-center">
+
+              {/* First Logo Group */}
+              <div className="flex shrink-0 items-center gap-12 px-6 sm:gap-20 lg:gap-24">
+
+                {/* Dubai Courts */}
+                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[23px] font-black text-[#171717]">
+                      محاكم دبي
+                    </span>
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full border-[5px] border-[#c8323b] text-[15px] font-bold text-[#333333]">
+                      ⚖
+                    </span>
                   </div>
+                  <span className="mt-1 text-[11px] font-bold tracking-wide text-[#222222]">
+                    DUBAI COURTS
+                  </span>
+                </div>
 
-                  <div>
-                    <label className="block text-[14px] font-bold text-black mb-1.5">
-                      Email address*
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      // placeholder="Your email"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      className="w-full rounded-[6px]  bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors"
-                    />
+                {/* Emirates Identity Authority */}
+                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[22px] text-[#c8323b]">◉</span>
+                    <span className="text-[19px] font-semibold leading-tight text-[#555555]">
+                      الهيئة الاتحادية<br />للهوية والجنسية
+                    </span>
+                  </div>
+                  <span className="mt-1 text-[10px] font-medium tracking-wide text-[#555555]">
+                    EMIRATES IDENTITY AUTHORITY
+                  </span>
+                </div>
+
+                {/* Dubai Police */}
+                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
+                  <span className="text-[21px] font-bold text-[#087653]">
+                    شرطة دبي
+                  </span>
+                  <span className="mt-1 text-[12px] font-extrabold tracking-wide text-[#087653]">
+                    DUBAI POLICE
+                  </span>
+                  <span className="text-[25px] leading-none text-[#087653]">
+                    ۞
+                  </span>
+                </div>
+
+                {/* Dubai Economy */}
+                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
+                  <span className="text-[18px] font-bold text-[#333333]">
+                    اقتصادية دبي
+                  </span>
+                  <div className="mt-1 flex items-center gap-2">
+                    <span className="text-[11px] font-bold tracking-wide text-[#333333]">
+                      DUBAI ECONOMY
+                    </span>
+                    <span className="h-7 w-7 skew-y-[-18deg] bg-[#14745f]" />
                   </div>
                 </div>
 
-                {/* Row 2: Subject */}
-                <div>
-                  <label className="block text-[14px] font-bold  text-black mb-1.5">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    // placeholder="Topic or inquiry"
-                    value={formData.subject}
-                    onChange={(e) =>
-                      setFormData({ ...formData, subject: e.target.value })
-                    }
-                    className="w-full rounded-[6px]  bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors"
-                  />
+                {/* Government of Dubai */}
+                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
+                  <span className="text-[25px] font-bold text-[#d70000]">
+                    حكومة دبي
+                  </span>
+                  <span className="mt-2 text-[12px] font-bold tracking-wide text-[#d70000]">
+                    GOVERNMENT OF DUBAI
+                  </span>
                 </div>
 
-                {/* Row 3: How Can We Help You* */}
-                <div>
-                  <label className="block text-[14px] font-bold  text-black mb-1.5">
-                    How Can We Help You*
-                  </label>
-                  <textarea
-                    rows={4}
-                    required
-                    // placeholder="Tell us about your requirements..."
-                    value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
-                    className="w-full rounded-[6px]   bg-white px-3.5 py-2.5 text-[13.5px] text-[#111827] placeholder:text-[#9ca3af] focus:outline-none focus:border-black transition-colors resize-none"
-                  />
+                {/* Dubai Health Authority */}
+                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
+                  <span className="text-[19px] font-bold text-[#333333]">
+                    هيئة الصحة بدبي
+                  </span>
+                  <span className="mt-1 text-[10px] font-bold tracking-wide text-[#333333]">
+                    DUBAI HEALTH AUTHORITY
+                  </span>
+                  <span className="mt-1 text-[22px] leading-none text-[#169a9a]">
+                    ✦
+                  </span>
                 </div>
 
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="mt-2 flex w-full items-center justify-center gap-2 rounded-[6px] bg-[#d70000] py-3.5 text-center text-[12px] font-bold tracking-widest text-white uppercase hover:bg-white  hover:text-[#d70000]   hover:border-1 transition-colors shadow-sm cursor-pointer disabled:opacity-75"
-                >
-                  <span>{loading ? "SENDING..." : "→ SEND MESSAGE"}</span>
-                </button>
+              </div>
 
-                {/* Success Feedback */}
-                {submitted && (
-                  <div className="rounded-[8px] bg-[#ecfdf5] border border-[#a7f3d0] p-3.5 text-center text-[12.5px] font-medium text-[#065f46]">
-                    Thank you! Your message has been sent successfully. Our consultants will
-                    About you shortly.
+              {/* Duplicate Logo Group - Seamless Loop */}
+              <div
+                className="flex shrink-0 items-center gap-12 px-6 sm:gap-20 lg:gap-24"
+                aria-hidden="true"
+              >
+
+                {/* Dubai Courts */}
+                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[23px] font-black text-[#171717]">
+                      محاكم دبي
+                    </span>
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full border-[5px] border-[#c8323b] text-[15px] font-bold text-[#333333]">
+                      ⚖
+                    </span>
                   </div>
-                )}
-              </form>
+                  <span className="mt-1 text-[11px] font-bold tracking-wide text-[#222222]">
+                    DUBAI COURTS
+                  </span>
+                </div>
+
+                {/* Emirates Identity Authority */}
+                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[22px] text-[#c8323b]">◉</span>
+                    <span className="text-[19px] font-semibold leading-tight text-[#555555]">
+                      الهيئة الاتحادية<br />للهوية والجنسية
+                    </span>
+                  </div>
+                  <span className="mt-1 text-[10px] font-medium tracking-wide text-[#555555]">
+                    EMIRATES IDENTITY AUTHORITY
+                  </span>
+                </div>
+
+                {/* Dubai Police */}
+                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
+                  <span className="text-[21px] font-bold text-[#087653]">
+                    شرطة دبي
+                  </span>
+                  <span className="mt-1 text-[12px] font-extrabold tracking-wide text-[#087653]">
+                    DUBAI POLICE
+                  </span>
+                  <span className="text-[25px] leading-none text-[#087653]">
+                    ۞
+                  </span>
+                </div>
+
+                {/* Dubai Economy */}
+                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
+                  <span className="text-[18px] font-bold text-[#333333]">
+                    اقتصادية دبي
+                  </span>
+                  <div className="mt-1 flex items-center gap-2">
+                    <span className="text-[11px] font-bold tracking-wide text-[#333333]">
+                      DUBAI ECONOMY
+                    </span>
+                    <span className="h-7 w-7 skew-y-[-18deg] bg-[#14745f]" />
+                  </div>
+                </div>
+
+                {/* Government of Dubai */}
+                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
+                  <span className="text-[25px] font-bold text-[#d70000]">
+                    حكومة دبي
+                  </span>
+                  <span className="mt-2 text-[12px] font-bold tracking-wide text-[#d70000]">
+                    GOVERNMENT OF DUBAI
+                  </span>
+                </div>
+
+                {/* Dubai Health Authority */}
+                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
+                  <span className="text-[19px] font-bold text-[#333333]">
+                    هيئة الصحة بدبي
+                  </span>
+                  <span className="mt-1 text-[10px] font-bold tracking-wide text-[#333333]">
+                    DUBAI HEALTH AUTHORITY
+                  </span>
+                  <span className="mt-1 text-[22px] leading-none text-[#169a9a]">
+                    ✦
+                  </span>
+                </div>
+
+              </div>
             </div>
           </div>
         </div>
+
+        {/* Marquee Animation */}
+        <style jsx>{`
+          .logo-marquee {
+            animation: logo-scroll 30s linear infinite;
+            will-change: transform;
+          }
+
+          .logo-marquee:hover {
+            animation-play-state: paused;
+          }
+
+          @keyframes logo-scroll {
+            from {
+              transform: translateX(0);
+            }
+
+            to {
+              transform: translateX(-50%);
+            }
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            .logo-marquee {
+              animation: none;
+            }
+          }
+        `}</style>
       </section>
 
+
+<WhyChooseUs />
+
+      {/* Our Projects section directly after WhyChooseUs */}
+      <OurProjects />
+
+
+<Stack/>
+<BusinessSetup/>
       {/* =========================================================================
           SECTION 4: FAQ'S ("Everything You Need to Know") Accordion
           ========================================================================= */}
@@ -395,3 +505,398 @@ export default function About({ extraClassName = "" }: AboutProps) {
     </div>
   );
 }
+
+
+/* =========================================================================
+   OUR PROJECTS - INTERACTIVE HORIZONTAL ACCORDION
+   ========================================================================= */
+
+type ProjectItem = {
+  number: string;
+  title: string;
+  heading: string;
+  description: string;
+  image: string;
+  href: string;
+  panelClass: string;
+};
+
+const PROJECT_ITEMS: ProjectItem[] = [
+  {
+    number: "01.",
+    title: "Industrial Automation",
+    heading: "Machinery Installation & Commissioning",
+    description:
+      "Safe and precise installation of heavy machinery, with performance testing and calibration.",
+    image: "/images/project-machinery.jpg",
+    href: "/projects/industrial-automation",
+    panelClass: "project-panel-orange",
+  },
+  {
+    number: "02.",
+    title: "Factory Infrastructure",
+    heading: "Factory Infrastructure Development",
+    description:
+      "Complete factory infrastructure solutions designed for efficient operations, safety and long-term performance.",
+    image: "/images/project-infrastructure.jpg",
+    href: "/projects/factory-infrastructure",
+    panelClass: "project-panel-white",
+  },
+  {
+    number: "03.",
+    title: "Industrial Manufacturing",
+    heading: "Industrial Manufacturing Solutions",
+    description:
+      "Reliable industrial manufacturing solutions with modern processes, precision engineering and quality control.",
+    image: "/images/project-manufacturing.jpg",
+    href: "/projects/industrial-manufacturing",
+    panelClass: "project-panel-dark",
+  },
+];
+
+function OurProjects() {
+  const [activeProject, setActiveProject] = useState(0);
+
+  return (
+    <section className="our-projects-section w-full overflow-hidden bg-[#d70000] px-5 py-16 sm:px-10 lg:px-12 lg:py-24">
+      <div className="mx-auto grid max-w-[1450px] grid-cols-1 gap-12 lg:grid-cols-[0.95fr_1.35fr] lg:items-stretch lg:gap-10">
+
+        {/* Left: section introduction */}
+        <div className="flex flex-col justify-between">
+          <div>
+            <p className="flex items-center gap-2 text-[14px] font-semibold text-white">
+              {/* <span className="h-4 w-[2px] bg-white" /> */}
+              Our Project
+            </p>
+
+            <h2 className="mt-5 text-[38px] font-semibold  leading-[1.08] tracking-[-1.8px] text-white sm:text-[48px] lg:text-[58px]">
+              Comprehensive
+              <br />
+              Industry Solution
+            </h2>
+          </div>
+
+          <div className="mt-10 lg:mt-24">
+            <p className="max-w-[510px] text-[14px] leading-[1.9] text-white sm:text-[15px]">
+              We don&apos;t just deliver services — we deliver confidence. With
+              decades of hands-on experience and a commitment to quality, we
+              empower industries with reliable, efficient solutions.
+            </p>
+
+            <Link
+              href="/projects"
+              className="mt-12 inline-flex items-center group gap-2 rounded-[5px] bg-white px-5 py-1.5 text-[14px] font-bold text-[#d70000] transition-colors  "
+            >
+              View all Services
+              <span className="flex h-9 w-9 items-center group-hover:rotate-45 transition-transform duration-300 justify-center rounded-[4px] bg-white text-[30px] group-hover:translate-x-1 font-normal text-[#d70000]">
+                ↗
+              </span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Right: expandable project panels */}
+        <div className="project-accordion flex min-h-[440px] gap-1">
+          {PROJECT_ITEMS.map((project, index) => {
+            const isActive = activeProject === index;
+
+            return (
+              <article
+                key={project.number}
+                className={`project-panel ${project.panelClass} ${
+                  isActive ? "is-active" : ""
+                }`}
+              >
+                <button
+                  type="button"
+                  className="project-panel-tab"
+                  onClick={() => setActiveProject(index)}
+                  aria-expanded={isActive}
+                  aria-label={`Show ${project.title}`}
+                >
+                  <span className="project-panel-number">{project.number}</span>
+                  <span className="project-panel-vertical-title">
+                    {project.title}
+                  </span>
+                </button>
+
+                <div
+                  className="project-panel-content"
+                  aria-hidden={!isActive}
+                >
+                  <div className="project-panel-content-inner">
+                    <h3>{project.heading}</h3>
+                    <p>{project.description}</p>
+
+                    <img
+                      src={project.image}
+                      alt={project.heading}
+                      className="project-panel-image"
+                      loading="lazy"
+                    />
+
+                    <Link href={project.href} className="project-panel-link">
+                      View all Services
+                      <span>↗</span>
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+
+      <style jsx>{`
+        .project-accordion {
+          width: 100%;
+          height: 546px;
+          overflow: hidden;
+        }
+
+        .project-panel {
+          position: relative;
+          display: flex;
+          flex: 0 0 86px;
+          min-width: 0;
+          height: 100%;
+          overflow: hidden;
+          border-radius: 11px;
+          transition: flex 700ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .project-panel.is-active {
+          flex: 1 1 0%;
+        }
+
+        .project-panel-orange {
+          color: #d70000;
+          background: white;
+        }
+
+        .project-panel-white {
+          color: #171717;
+          background: #fff;
+        }
+
+        .project-panel-dark {
+          color: #fff;
+          background: #242424;
+        }
+
+        .project-panel-tab {
+          position: relative;
+          display: flex;
+          flex: 0 0 86px;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          padding: 27px 10px;
+          border: 0;
+          background: transparent;
+          color: inherit;
+          cursor: pointer;
+        }
+
+        .project-panel-number {
+          font-size: 23px;
+          font-weight: 500;
+        }
+
+        .project-panel-vertical-title {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 340px;
+          transform: translate(-50%, -50%) rotate(-90deg);
+          white-space: nowrap;
+          text-align: center;
+          font-size: 22px;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+
+        .project-panel.is-active .project-panel-vertical-title {
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        .project-panel-content {
+          flex: 1;
+          min-width: 0;
+          overflow: hidden;
+          visibility: hidden;
+          opacity: 0;
+          transition:
+            opacity 300ms ease,
+            visibility 0s linear 450ms;
+        }
+
+        .project-panel.is-active .project-panel-content {
+          visibility: visible;
+          opacity: 1;
+          transition: opacity 350ms ease 180ms;
+        }
+
+        .project-panel-content-inner {
+          width: 100%;
+          min-width: 0;
+          padding: 48px 35px 30px;
+        }
+
+        .project-panel-content h3 {
+          max-width: 450px;
+          font-size: clamp(23px, 2.2vw, 36px);
+          font-weight: 700;
+          line-height: 1.12;
+          letter-spacing: -1px;
+        }
+
+        .project-panel-content p {
+          max-width: 450px;
+          margin-top: 20px;
+          font-size: 15px;
+          line-height: 1.7;
+        }
+
+        .project-panel-image {
+          display: block;
+          width: 100%;
+          height: 200px;
+          margin-top: 30px;
+          border-radius: 10px;
+          object-fit: cover;
+        }
+
+        .project-panel-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 22px;
+          margin-top: 30px;
+          padding: 8px 10px 8px 25px;
+          border-radius: 5px;
+          background: #fff;
+          color: #171717;
+          font-size: 14px;
+          font-weight: 700;
+          transition: background 250ms ease, color 250ms ease;
+        }
+
+        .project-panel-link span {
+          display: flex;
+          width: 36px;
+          height: 36px;
+          align-items: center;
+          justify-content: center;
+          border-radius: 3px;
+          background: #ff3d00;
+          color: #fff;
+          font-size: 24px;
+        }
+
+        .project-panel-link:hover {
+          background: #171717;
+          color: #fff;
+        }
+
+        @media (max-width: 1023px) {
+          .project-accordion {
+            height: 480px;
+          }
+
+          .project-panel-content-inner {
+            padding: 35px 25px;
+          }
+
+          .project-panel-image {
+            height: 180px;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .project-accordion {
+            height: auto;
+            flex-direction: column;
+            overflow: visible;
+            gap: 8px;
+          }
+
+          .project-panel,
+          .project-panel.is-active {
+            flex: none;
+            width: 100%;
+            height: 65px;
+            flex-direction: column;
+            transition: height 600ms cubic-bezier(0.22, 1, 0.36, 1);
+          }
+
+          .project-panel.is-active {
+            height: 440px;
+          }
+
+          .project-panel-tab {
+            flex: 0 0 65px;
+            width: 100%;
+            min-height: 65px;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 20px;
+            padding: 15px 20px;
+          }
+
+          .project-panel-number {
+            font-size: 18px;
+          }
+
+          .project-panel-vertical-title {
+            position: static;
+            width: auto;
+            transform: none;
+            font-size: 15px;
+            text-align: left;
+          }
+
+          .project-panel.is-active .project-panel-vertical-title {
+            opacity: 1;
+          }
+
+          .project-panel-content {
+            width: 100%;
+            flex: 1;
+          }
+
+          .project-panel-content-inner {
+            padding: 12px 20px 25px;
+          }
+
+          .project-panel-content h3 {
+            font-size: 24px;
+          }
+
+          .project-panel-content p {
+            margin-top: 12px;
+            font-size: 13px;
+          }
+
+          .project-panel-image {
+            height: 145px;
+            margin-top: 20px;
+          }
+
+          .project-panel-link {
+            margin-top: 18px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .project-panel,
+          .project-panel-content,
+          .project-panel-link {
+            transition: none;
+          }
+        }
+      `}</style>
+    </section>
+  );
+}
+
