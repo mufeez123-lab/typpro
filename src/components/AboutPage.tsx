@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import WhyChooseUs from "./WhyChooseUs";
 import Stack from "./Stack";
 import BusinessSetup from "./BusinessSetup";
+import Setup from "./Setup";
 
 export interface AboutProps {
   extraClassName?: string;
@@ -220,175 +221,50 @@ export default function About({ extraClassName = "" }: AboutProps) {
           {/* Auto Scrolling Logos */}
           <div className="relative mt-14 w-full overflow-hidden lg:mt-20">
 
-            <div className="logo-marquee flex w-max items-center">
+          <div className="logo-marquee flex w-max items-center">
 
-              {/* First Logo Group */}
-              <div className="flex shrink-0 items-center gap-12 px-6 sm:gap-20 lg:gap-24">
+  {/* First Logo Group */}
+  <div className="flex shrink-0 items-center gap-12 px-6 sm:gap-20 lg:gap-24">
 
-                {/* Dubai Courts */}
-                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
-                  <div className="flex items-center gap-2">
-                    <span className="text-[23px] font-black text-[#171717]">
-                      محاكم دبي
-                    </span>
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full border-[5px] border-[#c8323b] text-[15px] font-bold text-[#333333]">
-                      ⚖
-                    </span>
-                  </div>
-                  <span className="mt-1 text-[11px] font-bold tracking-wide text-[#222222]">
-                    DUBAI COURTS
-                  </span>
-                </div>
+    {[1, 2, 3, 4, 5, 6].map((logo) => (
+      <div
+        key={logo}
+        className="flex min-w-[160px] items-center justify-center"
+      >
+        <img
+          src={`/images/uae/${logo}.png`}
+          alt={`UAE Government Department ${logo}`}
+          className="h-[95px] w-[150px] object-contain"
+          loading="lazy"
+        />
+      </div>
+    ))}
 
-                {/* Emirates Identity Authority */}
-                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
-                  <div className="flex items-center gap-2">
-                    <span className="text-[22px] text-[#c8323b]">◉</span>
-                    <span className="text-[19px] font-semibold leading-tight text-[#555555]">
-                      الهيئة الاتحادية<br />للهوية والجنسية
-                    </span>
-                  </div>
-                  <span className="mt-1 text-[10px] font-medium tracking-wide text-[#555555]">
-                    EMIRATES IDENTITY AUTHORITY
-                  </span>
-                </div>
+  </div>
 
-                {/* Dubai Police */}
-                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
-                  <span className="text-[21px] font-bold text-[#087653]">
-                    شرطة دبي
-                  </span>
-                  <span className="mt-1 text-[12px] font-extrabold tracking-wide text-[#087653]">
-                    DUBAI POLICE
-                  </span>
-                  <span className="text-[25px] leading-none text-[#087653]">
-                    ۞
-                  </span>
-                </div>
+  {/* Duplicate Logo Group - Seamless Loop */}
+  <div
+    className="flex shrink-0 items-center gap-12 px-6 sm:gap-20 lg:gap-24"
+    aria-hidden="true"
+  >
 
-                {/* Dubai Economy */}
-                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
-                  <span className="text-[18px] font-bold text-[#333333]">
-                    اقتصادية دبي
-                  </span>
-                  <div className="mt-1 flex items-center gap-2">
-                    <span className="text-[11px] font-bold tracking-wide text-[#333333]">
-                      DUBAI ECONOMY
-                    </span>
-                    <span className="h-7 w-7 skew-y-[-18deg] bg-[#14745f]" />
-                  </div>
-                </div>
+    {[1, 2, 3, 4, 5, 6].map((logo) => (
+      <div
+        key={logo}
+        className="flex min-w-[160px] items-center justify-center"
+      >
+        <img
+          src={`/images/uae/${logo}.png`}
+          alt=""
+          className="h-[95px] w-[150px] object-contain"
+          loading="lazy"
+        />
+      </div>
+    ))}
 
-                {/* Government of Dubai */}
-                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
-                  <span className="text-[25px] font-bold text-[#d70000]">
-                    حكومة دبي
-                  </span>
-                  <span className="mt-2 text-[12px] font-bold tracking-wide text-[#d70000]">
-                    GOVERNMENT OF DUBAI
-                  </span>
-                </div>
+  </div>
 
-                {/* Dubai Health Authority */}
-                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
-                  <span className="text-[19px] font-bold text-[#333333]">
-                    هيئة الصحة بدبي
-                  </span>
-                  <span className="mt-1 text-[10px] font-bold tracking-wide text-[#333333]">
-                    DUBAI HEALTH AUTHORITY
-                  </span>
-                  <span className="mt-1 text-[22px] leading-none text-[#169a9a]">
-                    ✦
-                  </span>
-                </div>
-
-              </div>
-
-              {/* Duplicate Logo Group - Seamless Loop */}
-              <div
-                className="flex shrink-0 items-center gap-12 px-6 sm:gap-20 lg:gap-24"
-                aria-hidden="true"
-              >
-
-                {/* Dubai Courts */}
-                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
-                  <div className="flex items-center gap-2">
-                    <span className="text-[23px] font-black text-[#171717]">
-                      محاكم دبي
-                    </span>
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full border-[5px] border-[#c8323b] text-[15px] font-bold text-[#333333]">
-                      ⚖
-                    </span>
-                  </div>
-                  <span className="mt-1 text-[11px] font-bold tracking-wide text-[#222222]">
-                    DUBAI COURTS
-                  </span>
-                </div>
-
-                {/* Emirates Identity Authority */}
-                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
-                  <div className="flex items-center gap-2">
-                    <span className="text-[22px] text-[#c8323b]">◉</span>
-                    <span className="text-[19px] font-semibold leading-tight text-[#555555]">
-                      الهيئة الاتحادية<br />للهوية والجنسية
-                    </span>
-                  </div>
-                  <span className="mt-1 text-[10px] font-medium tracking-wide text-[#555555]">
-                    EMIRATES IDENTITY AUTHORITY
-                  </span>
-                </div>
-
-                {/* Dubai Police */}
-                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
-                  <span className="text-[21px] font-bold text-[#087653]">
-                    شرطة دبي
-                  </span>
-                  <span className="mt-1 text-[12px] font-extrabold tracking-wide text-[#087653]">
-                    DUBAI POLICE
-                  </span>
-                  <span className="text-[25px] leading-none text-[#087653]">
-                    ۞
-                  </span>
-                </div>
-
-                {/* Dubai Economy */}
-                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
-                  <span className="text-[18px] font-bold text-[#333333]">
-                    اقتصادية دبي
-                  </span>
-                  <div className="mt-1 flex items-center gap-2">
-                    <span className="text-[11px] font-bold tracking-wide text-[#333333]">
-                      DUBAI ECONOMY
-                    </span>
-                    <span className="h-7 w-7 skew-y-[-18deg] bg-[#14745f]" />
-                  </div>
-                </div>
-
-                {/* Government of Dubai */}
-                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
-                  <span className="text-[25px] font-bold text-[#d70000]">
-                    حكومة دبي
-                  </span>
-                  <span className="mt-2 text-[12px] font-bold tracking-wide text-[#d70000]">
-                    GOVERNMENT OF DUBAI
-                  </span>
-                </div>
-
-                {/* Dubai Health Authority */}
-                <div className="flex min-w-[160px] flex-col items-center justify-center text-center">
-                  <span className="text-[19px] font-bold text-[#333333]">
-                    هيئة الصحة بدبي
-                  </span>
-                  <span className="mt-1 text-[10px] font-bold tracking-wide text-[#333333]">
-                    DUBAI HEALTH AUTHORITY
-                  </span>
-                  <span className="mt-1 text-[22px] leading-none text-[#169a9a]">
-                    ✦
-                  </span>
-                </div>
-
-              </div>
-            </div>
+</div>
           </div>
         </div>
 
@@ -430,6 +306,7 @@ export default function About({ extraClassName = "" }: AboutProps) {
 
 <Stack/>
 <BusinessSetup/>
+<Setup/>
       {/* =========================================================================
           SECTION 4: FAQ'S ("Everything You Need to Know") Accordion
           ========================================================================= */}
@@ -520,36 +397,35 @@ type ProjectItem = {
   href: string;
   panelClass: string;
 };
-
 const PROJECT_ITEMS: ProjectItem[] = [
   {
     number: "01.",
-    title: "Industrial Automation",
-    heading: "Machinery Installation & Commissioning",
+    title: "Our Mission",
+    heading: "Delivering Excellence Through Innovation",
     description:
-      "Safe and precise installation of heavy machinery, with performance testing and calibration.",
-    image: "/images/project-machinery.jpg",
-    href: "/projects/industrial-automation",
+      "Our mission is to deliver reliable, high-quality industrial solutions through innovation, technical expertise and a commitment to excellence. We strive to understand our clients' needs, provide efficient solutions and build lasting relationships through trust, safety and professionalism.",
+    image: "/images/mission.jpg",
+    href: "/about/mission",
     panelClass: "project-panel-orange",
   },
   {
     number: "02.",
-    title: "Factory Infrastructure",
-    heading: "Factory Infrastructure Development",
+    title: "Our Vision",
+    heading: "Building A Better Industrial Future",
     description:
-      "Complete factory infrastructure solutions designed for efficient operations, safety and long-term performance.",
-    image: "/images/project-infrastructure.jpg",
-    href: "/projects/factory-infrastructure",
+      "Our vision is to become a trusted leader in industrial solutions, recognized for quality, innovation and customer satisfaction. We aim to shape the future of industries through advanced technologies, sustainable practices and continuous improvement.",
+    image: "/images/vision.jpg",
+    href: "/about/vision",
     panelClass: "project-panel-white",
   },
   {
     number: "03.",
-    title: "Industrial Manufacturing",
-    heading: "Industrial Manufacturing Solutions",
+    title: "Our Core Values",
+    heading: "The Principles That Define Us",
     description:
-      "Reliable industrial manufacturing solutions with modern processes, precision engineering and quality control.",
-    image: "/images/project-manufacturing.jpg",
-    href: "/projects/industrial-manufacturing",
+      "Integrity, quality, safety, teamwork and customer commitment are at the heart of everything we do. We believe in maintaining transparency, delivering on our promises, empowering our people and creating long-term value for every client and partner.",
+    image: "/images/core-values.jpg",
+    href: "/about/core-values",
     panelClass: "project-panel-dark",
   },
 ];
@@ -559,17 +435,17 @@ function OurProjects() {
 
   return (
     <section className="our-projects-section w-full overflow-hidden bg-[#d70000] px-5 py-16 sm:px-10 lg:px-12 lg:py-24">
-      <div className="mx-auto grid max-w-[1450px] grid-cols-1 gap-12 lg:grid-cols-[0.95fr_1.35fr] lg:items-stretch lg:gap-10">
+      <div className="mx-auto grid max-w-[990px] grid-cols-1 gap-12 lg:grid-cols-[0.95fr_1.35fr] lg:items-stretch lg:gap-10">
 
         {/* Left: section introduction */}
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col ">
           <div>
             <p className="flex items-center gap-2 text-[14px] font-semibold text-white">
               {/* <span className="h-4 w-[2px] bg-white" /> */}
               Our Project
             </p>
 
-            <h2 className="mt-5 text-[38px] font-semibold  leading-[1.08] tracking-[-1.8px] text-white sm:text-[48px] lg:text-[58px]">
+            <h2 className="mt-5 text-[38px] font-semibold  leading-[1.08] tracking-[-1.8px] text-white  ">
               Comprehensive
               <br />
               Industry Solution
@@ -746,7 +622,7 @@ function OurProjects() {
 
         .project-panel-content h3 {
           max-width: 450px;
-          font-size: clamp(23px, 2.2vw, 36px);
+          font-size: clamp(23px, 2.2vw, 16px);
           font-weight: 700;
           line-height: 1.12;
           letter-spacing: -1px;
