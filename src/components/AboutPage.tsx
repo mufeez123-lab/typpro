@@ -403,8 +403,8 @@ const PROJECT_ITEMS: ProjectItem[] = [
     title: "Our Mission",
     heading: "Delivering Excellence Through Innovation",
     description:
-      "Our mission is to deliver reliable, high-quality industrial solutions through innovation, technical expertise and a commitment to excellence. We strive to understand our clients' needs, provide efficient solutions and build lasting relationships through trust, safety and professionalism.",
-    image: "/images/mission.jpg",
+      "Our mission is to deliver reliable, high-quality industrial solutions through innovation, technical expertise and a commitment to excellence. ",
+    image: "/images/contact-bg-1.jpg",
     href: "/about/mission",
     panelClass: "project-panel-orange",
   },
@@ -413,7 +413,7 @@ const PROJECT_ITEMS: ProjectItem[] = [
     title: "Our Vision",
     heading: "Building A Better Industrial Future",
     description:
-      "Our vision is to become a trusted leader in industrial solutions, recognized for quality, innovation and customer satisfaction. We aim to shape the future of industries through advanced technologies, sustainable practices and continuous improvement.",
+      "Our vision is to become a trusted leader in industrial solutions, recognized for quality, innovation and customer satisfaction.",
     image: "/images/vision.jpg",
     href: "/about/vision",
     panelClass: "project-panel-white",
@@ -423,7 +423,7 @@ const PROJECT_ITEMS: ProjectItem[] = [
     title: "Our Core Values",
     heading: "The Principles That Define Us",
     description:
-      "Integrity, quality, safety, teamwork and customer commitment are at the heart of everything we do. We believe in maintaining transparency, delivering on our promises, empowering our people and creating long-term value for every client and partner.",
+      "Integrity, quality, safety, teamwork and customer commitment are at the heart of everything we do.",
     image: "/images/core-values.jpg",
     href: "/about/core-values",
     panelClass: "project-panel-dark",
@@ -502,7 +502,7 @@ function OurProjects() {
                 >
                   <div className="project-panel-content-inner">
                     <h3>{project.heading}</h3>
-                    <p>{project.description}</p>
+                    <p >{project.description}</p>
 
                     <img
                       src={project.image}
@@ -511,10 +511,15 @@ function OurProjects() {
                       loading="lazy"
                     />
 
-                    <Link href={project.href} className="project-panel-link">
-                      View all Services
-                      <span>↗</span>
-                    </Link>
+                    <Link
+              href="/projects"
+              className="mt-3 inline-flex items-center group gap-2 rounded-[5px] bg-[#d70000] px-2 py-2 text-[11px] font-bold text-white transition-colors  "
+            >
+              View all Services
+              <span className="flex h-4 w-4 items-center group-hover:rotate-45 transition-transform duration-300 justify-center rounded-[4px] bg-white  text-[20px] group-hover:translate-y-[-1] font-normal text-[#d70000]">
+                ↗
+              </span>
+            </Link>
                   </div>
                 </div>
               </article>
@@ -535,7 +540,7 @@ function OurProjects() {
           display: flex;
           flex: 0 0 86px;
           min-width: 0;
-          height: 100%;
+          height: 90%;
           overflow: hidden;
           border-radius: 11px;
           transition: flex 700ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -617,8 +622,11 @@ function OurProjects() {
         .project-panel-content-inner {
           width: 100%;
           min-width: 0;
-          padding: 48px 35px 30px;
+          padding: 30px 6px 20px;
         }
+          .project-panel-content-inner img{
+          
+          }
 
         .project-panel-content h3 {
           max-width: 450px;
@@ -631,7 +639,8 @@ function OurProjects() {
         .project-panel-content p {
           max-width: 450px;
           margin-top: 20px;
-          font-size: 15px;
+          font-size: 11px;
+          padding-right: 10px;
           line-height: 1.7;
         }
 
