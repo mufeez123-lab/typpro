@@ -20,7 +20,7 @@ interface NavLinkItem {
 
 const NAV_ITEMS: NavLinkItem[] = [
   { label: "Home", href: "/", type: "link" },
-  { label: "About", href: "/#about", type: "link" },
+  { label: "About", href: "/about", type: "link" },
   {
     label: "Business Setup",
     href: "/#business-setup",
@@ -63,7 +63,10 @@ function TypproLogo() {
 export default function Navbar() {
   const pathname = usePathname();
   const [isSticky, setIsSticky] = useState(false);
-  const [activeLink, setActiveLink] = useState("Home");
+  const [activeLink, setActiveLink] = useState(() => {
+    const matched = NAV_ITEMS.find((item) => item.href === pathname);
+    return matched ? matched.label : "Home";
+  });
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<Record<string, boolean>>({
